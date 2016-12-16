@@ -54,7 +54,7 @@ Description: A collection of photo galleries, video players and other various wi
 
 
 
-<meta itemprop="wordCount" content="1027">
+<meta itemprop="wordCount" content="1028">
 
 
 
@@ -88,15 +88,35 @@ Description: A collection of photo galleries, video players and other various wi
 <style>
 .slick-slide 
 {
-    margin: 0 27px;
-    width: 20%;
-    height: 20%;
+    margin: 0 15px;
 }
 
-.slick-list 
-{
-    margin: 0 -27px;
+.slick-initialized .slick-slide {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
 }
+
+.slick-dots {
+  bottom: -50px;
+}
+
+.slick-prev { 
+    left: -20px;
+}
+
+.slick-next {
+    right: -20px;
+}
+
+.slick-prev:before {
+  color: grey;
+}
+
+.slick-next:before {
+  color: grey;
+}
+
 </style>
 </head>
 <body>
@@ -614,12 +634,14 @@ Description: A collection of photo galleries, video players and other various wi
 <script type="text/javascript">
     $(document).ready(function()
     {
-        $('.slick').slick(
-            {
-                "centerMode": true,
-                "dots": true,
-          "adaptiveHeight": true
-            });
+    $('.slick').each(function() 
+    {
+      $(this).slick(
+        {
+          "centerMode": true,
+          "dots": true
+        });
+    });
     });
 </script>
 
