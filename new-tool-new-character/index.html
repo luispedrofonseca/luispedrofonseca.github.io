@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>New tool — New character! &middot; Luís Pedro Fonseca</title>
+    <meta name="generator" content="Hugo 0.17" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Luís Pedro Fonseca">
+    
+      <meta name="description" content="Freelance Unity Game Developer">
+    
+    
+    <link rel="icon" href="http://www.luispedrofonseca.com/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.luispedrofonseca.com/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://www.luispedrofonseca.com/css/style.css">
+    <link rel="stylesheet" href="http://www.luispedrofonseca.com/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.luispedrofonseca.com/css/monokai.css">
+    <link rel="stylesheet" href="http://www.luispedrofonseca.com/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="New tool — New character!" />
+<meta property="og:description" content="A month ago I wrote about why I wasn&rsquo;t renewing my Adobe subscription. At that time, I was planning to replace Photoshop and Illustrator with Pixelmator and iDraw, respectively. One month later, everything still stands, but those like me, who have been considering a change for a long time, now have one more VERY strong reason to do so.
+A couple of weeks ago, while on vacation, I was checking my Twitter feed and someone shared a video about a new software that just got released on the App Store." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.luispedrofonseca.com/new-tool-new-character/" />
+
+
+<meta property="og:updated_time" content="2014-10-11T17:25:15&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="New tool — New character!">
+<meta itemprop="description" content="A month ago I wrote about why I wasn&rsquo;t renewing my Adobe subscription. At that time, I was planning to replace Photoshop and Illustrator with Pixelmator and iDraw, respectively. One month later, everything still stands, but those like me, who have been considering a change for a long time, now have one more VERY strong reason to do so.
+A couple of weeks ago, while on vacation, I was checking my Twitter feed and someone shared a video about a new software that just got released on the App Store.">
+
+
+<meta itemprop="dateModified" content="2014-10-11T17:25:15&#43;00:00" />
+<meta itemprop="wordCount" content="335">
+
+
+
+<meta itemprop="keywords" content="csharp,plugins,procamera2d,project-cuba,uncategorized,unity," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="New tool — New character!"/>
+<meta name="twitter:description" content="A month ago I wrote about why I wasn&rsquo;t renewing my Adobe subscription. At that time, I was planning to replace Photoshop and Illustrator with Pixelmator and iDraw, respectively. One month later, everything still stands, but those like me, who have been considering a change for a long time, now have one more VERY strong reason to do so.
+A couple of weeks ago, while on vacation, I was checking my Twitter feed and someone shared a video about a new software that just got released on the App Store."/>
+<meta name="twitter:site" content="@lpfonseca"/>
+
+
+    
+
+    
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://www.luispedrofonseca.com/" id="logo">
+        
+        <span class="site-title">Luís Pedro Fonseca</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://www.luispedrofonseca.com/">Blog</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.luispedrofonseca.com/about">About</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.luispedrofonseca.com/contact">Contact</a>
+          
+          
+
+          
+
+          
+          
+          
+          
+          
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://www.luispedrofonseca.com/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://www.luispedrofonseca.com/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://www.luispedrofonseca.com/">Blog</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.luispedrofonseca.com/about">About</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.luispedrofonseca.com/contact">Contact</a></td>
+          
+          
+
+          
+
+          
+          
+          
+          
+          
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://www.luispedrofonseca.com/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://www.luispedrofonseca.com/avatar.png">
+      <h2 id="name">Luís Pedro Fonseca</h2>
+      <h3 id="title">Senior developer @<a href="http://www.x-team.com">X-Team</a><br>Part-time indie game developer<br><a href="http://www.procamera2d.com">ProCamera2D</a> plugin author</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Porto, Portugal</span>
+      
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/lpfonseca" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+    <div></div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                
+                <img src="http://www.luispedrofonseca.com/banners/affinity_designer_featured_image.png" class="article-banner">
+                
+            
+
+            <header class="article-header">
+    <a href="http://www.luispedrofonseca.com/new-tool-new-character/">
+    <h1 class="article-title" itemprop="name">
+        New tool — New character!
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2014-10-11 17:25:15 &#43;0000 UTC" itemprop="datePublished">2014-10-11</time>
+            
+        </div>
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://www.luispedrofonseca.com/categories/project-cuba">Project Cuba</a>
+                
+                
+            </div>
+            
+        
+
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>A month ago I wrote about why <a href="http://www.luispedrofonseca.com/thank-you-adobe/">I wasn&rsquo;t renewing my Adobe subscription</a>. At that time, I was planning to replace Photoshop and Illustrator with Pixelmator and iDraw, respectively. One month later, everything still stands, but those like me, who have been considering a change for a long time, now have one more VERY strong reason to do so.</p>
+
+<p>A couple of weeks ago, while on vacation, I was checking my Twitter feed and someone shared a video about a new software that just got released on the App Store. At that time I thought I knew pretty much all alternatives to Adobe software out there. However, apparently the biggest contender to this &ldquo;war&rdquo; was hiding in the shadows ready to attack! Don&rsquo;t take me wrong, Pixelmator and iDraw are both pretty cool but this one is in a totally new league of its own!</p>
+
+<p>I&rsquo;m talking about Affinity Designer, by <a href="http://www.serif.com" target="_blank">Serif</a>. An UK company that I honestly haven&rsquo;t heard of before but that I&rsquo;m sure that will change from now on! Here&rsquo;s an overview of Affinity Designer&rsquo;s main features.</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/FTxPeheWO64" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+
+
+<p>Once I saw this video, I knew I had to try this. So I did and here&rsquo;s the result of it:</p>
+
+<p><img src="http://www.luispedrofonseca.com/images/new-tool-new-character/jacqueline1.png" alt="Jacqueline, Jack's wife" /></p>
+
+<p>If you look closely, you&rsquo;ll notice that all my characters for <a href="http://www.luispedrofonseca.com/project-cuba/">Project Cuba</a> have this style of flat colours with one shadow and one highlight per piece. While the technique in itself is pretty simple, achieving it in Illustrator / iDraw is not so much. However, in Affinity Designer, you can mask a shape by simply making it a child of another one!</p>
+
+<p>Such a simple detail allowed me to make this character in MUCH less time than I would in any other software. Since then I&rsquo;ve been using Affinity for the last couple of days and I keep finding small details like this that make working on it a huge pleasure.</p>
+
+<p>If you haven&rsquo;t decided already after sawing that presentation video, let me tell you, do yourself a favor and <a href="https://itunes.apple.com/us/app/affinity-designer/id824171161?mt=12" target="_blank">go get it</a>!!</p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.luispedrofonseca.com/new-tool-new-character/" data-id="3ea704729f0b241f3e92fc0702efa20f" class="article-share-link">
+        Share
+    </a>
+    
+    <a href="http://www.luispedrofonseca.com/new-tool-new-character//#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.luispedrofonseca.com/project-cuba-main-character-progress/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Project Cuba Main Character progress</div>
+    </a>
+    
+
+    
+    <a href="http://www.luispedrofonseca.com/create-unity-mobile-icons/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Create Unity mobile icons</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'luspedrofonseca';
+    var disqus_identifier = 'http:\/\/www.luispedrofonseca.com\/new-tool-new-character\/';
+    var disqus_title = 'New tool — New character!';
+    var disqus_url = 'http:\/\/www.luispedrofonseca.com\/new-tool-new-character\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Latest Posts
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/unite-los-angeles-16/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/unity-awards-16.png)" alt="New tool — New character!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/unite-los-angeles-16/" class="title">Unite Los Angeles 16</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-11-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-11-08</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/unity-custom-rect-editor/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/unity-custom-rect-editor.png)" alt="New tool — New character!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/unity-custom-rect-editor/" class="title">Unity Custom Rect Editor</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-10-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-10-08</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/new-site-engine-hugo/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/new-site-engine-hugo.jpg)" alt="New tool — New character!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/new-site-engine-hugo/" class="title">New site engine — Hugo</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-06-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-06-12</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/procamera2d-at-gdc16/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/procamera2d-at-gdc16.jpg)" alt="New tool — New character!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/procamera2d-at-gdc16/" class="title">ProCamera2D at GDC16</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-04-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-04-10</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/procamera2d-turns-1/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/procamera2d_anniversary.png)" alt="New tool — New character!" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/procamera2d-turns-1/" class="title">ProCamera2D turns 1!</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-01-22 09:35:51 &#43;0000 UTC" itemprop="datePublished">2016-01-22</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/csharp">
+                    csharp
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/plugins">
+                    plugins
+                </a>
+                <span class="category-list-count">10</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/procamera2d">
+                    procamera2d
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/project-cuba">
+                    project-cuba
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/uncategorized">
+                    uncategorized
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/unity">
+                    unity
+                </a>
+                <span class="category-list-count">15</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+    
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Luís Pedro Fonseca. All Rights Reserved. Website powered by <a href="//gohugo.io">Hugo</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://www.luispedrofonseca.com/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://www.luispedrofonseca.com/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post-rsses on Luís Pedro Fonseca</title>
+    <link>http://www.luispedrofonseca.com/post/index.xml</link>
+    <description>Recent content in Post-rsses on Luís Pedro Fonseca</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Luís Pedro Fonseca. All Rights Reserved. Website powered by [Hugo](//gohugo.io).</copyright>
+    <lastBuildDate>Tue, 08 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://www.luispedrofonseca.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Unite Los Angeles 16</title>
+      <link>http://www.luispedrofonseca.com/unite-los-angeles-16/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/unite-los-angeles-16/</guid>
+      <description>&lt;p&gt;It was with great pleasure and pride that I learnt that ProCamera2D got nominated to this year&amp;rsquo;s Unity Awards! The award cerimony took place in Los Angeles, on the first evening of the Unite 16 conference.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately I didn&amp;rsquo;t win, but being a finalist was more than I ever expected. The winner was &lt;a href=&#34;https://www.assetstore.unity3d.com/en/#!/content/53895&#34; target=&#34;_blank&#34;&gt;Dungeon Architect&lt;/a&gt;. Congratulations to Code Respawn and all the other nominees! They were all amazing and I&amp;rsquo;m very proud to be part of this group.&lt;/p&gt;
+
+&lt;p&gt;I also took the opportunity of going to the conference to spread the word about Pro Camera 2D. I had a booth for one day and like at GDC 16, it was a blast! I got to show the plugin to a lot of visitors and also got to meet some happy customers. I even got to meet (and take a picture) of the creator and visionary behind Unity - Mr. David Helgasson!&lt;/p&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;With the one and only &lt;a href=&#34;https://twitter.com/davidhelgason&#34;&gt;@davidhelgason&lt;/a&gt;! Super proud to hear his nice words about the plugin! :) &lt;a href=&#34;https://twitter.com/hashtag/unity3d?src=hash&#34;&gt;#unity3d&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/gamedev?src=hash&#34;&gt;#gamedev&lt;/a&gt; &lt;a href=&#34;https://t.co/XVO4i6PwCu&#34;&gt;pic.twitter.com/XVO4i6PwCu&lt;/a&gt;&lt;/p&gt;&amp;mdash; Luís Pedro Fonseca (@lpfonseca) &lt;a href=&#34;https://twitter.com/lpfonseca/status/793951852152770560&#34;&gt;November 2, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;The conference was at the Loews Hollywood Hotel, and while a beautiful venue in an iconic location (right in front of the Hollywood Chinese Theatre / Walk of Fame), it had a few issues. The talks were on the 5th floor and the Expo Hall was on the 3rd. This meant that attendees had to go up and down between floors and that got tiring very quickly. It also meant that some people didn&amp;rsquo;t get to visit as much of the Expo Hall / Made With Unity as they probably would like.&lt;/p&gt;
+
+&lt;p&gt;All in all, it was a great experience! Seeing first-hand what Unity has in store for the next few versions was exciting and I can&amp;rsquo;t wait to start exploring all the new features. You can learn more about those in this &lt;a href=&#34;https://blogs.unity3d.com/2016/11/01/unite-2016-keynote-wrap-up-news-on-graphics-platforms-vr-and-more/&#34; target=&#34;_blank&#34;&gt;Unity&amp;rsquo;s blog post&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Unity Custom Rect Editor</title>
+      <link>http://www.luispedrofonseca.com/unity-custom-rect-editor/</link>
+      <pubDate>Sat, 08 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/unity-custom-rect-editor/</guid>
+      <description>&lt;p&gt;One of the main goals of &lt;a href=&#34;http://www.procamera2d.com/user-guide/rooms&#34; target=&#34;_blank&#34;&gt;ProCamera2D&lt;/a&gt;&amp;rsquo;s new extension - &lt;a href=&#34;http://www.procamera2d.com/user-guide/extension-rooms/&#34; target=&#34;_blank&#34;&gt;Rooms&lt;/a&gt; - was to make it as user-friendly as possible.&lt;/p&gt;
+
+&lt;p&gt;Each room is basically a rectangle with some extra data to allow custom transitions. To make it easy to edit the rooms the user should be able to interact with them on the scene. However, Unity does not have a built-in rectangle (Rect) editor tool.&lt;/p&gt;
+
+&lt;p&gt;Gladly, Unity is very flexible and easy to extend, so I created a simple one. Here you go:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/luispedrofonseca/c81c26f6a30108893387292965d524b2.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;And then, to use it, all you have to do in your custom editor is something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;using UnityEngine;
+using System.Collections;
+using UnityEditor;
+
+public class RectExample : MonoBehaviour
+{
+    public Rect MyRect;
+}
+
+[CustomEditor(typeof(RectExample))]
+public class RectExampleEditor : Editor
+{
+    void OnSceneGUI()
+    {
+        var rectExample = (RectExample)target;
+
+        var rect = RectUtils.ResizeRect(
+            rectExample.MyRect,
+            Handles.CubeCap,
+            Color.green,
+            Color.yellow,
+            HandleUtility.GetHandleSize(Vector3.zero) * .1f,
+            .1f);
+
+        rectExample.MyRect = rect;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the end you get something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-custom-rect-editor/rect-editor.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of the boring default editor:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-custom-rect-editor/rect-editor-manual.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hope you enjoy this little tool and feel free to improve on it!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New site engine — Hugo</title>
+      <link>http://www.luispedrofonseca.com/new-site-engine-hugo/</link>
+      <pubDate>Sun, 12 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/new-site-engine-hugo/</guid>
+      <description>&lt;p&gt;Ever since I started with this blog/website, publishing a new post, updating some information or even tweaking its layout, has always been a chore.&lt;/p&gt;
+
+&lt;p&gt;This website was made with Wordpress because that&amp;rsquo;s pretty much the standard when you&amp;rsquo;re planning to start a blog. Your host provider gives you a very convenient one-click install solution and you can be up and running in a matter of minutes. There are an infinite number of plugins for every possible use-case you can think of and even more themes to customize its look.&lt;/p&gt;
+
+&lt;p&gt;However, this comes with a cost. The more plugins you add, or the more complex your theme gets, the slower you site will be. These issues are probably easy to fix with some more advanced Wordpress knowledge. But, I wanted to simplify and get rid of all the garbage that was making my website sluggish and a pain to update.&lt;/p&gt;
+
+&lt;p&gt;After some research, I found &lt;a href=&#34;http://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;. It had everything I needed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Easy installation and setup&lt;/li&gt;
+&lt;li&gt;Blazing-fast speed&lt;/li&gt;
+&lt;li&gt;Support for content written in Markdown&lt;/li&gt;
+&lt;li&gt;Syntax highlighting for code snippets&lt;/li&gt;
+&lt;li&gt;Customizable themes&lt;/li&gt;
+&lt;li&gt;Anywhere hosting (I&amp;rsquo;m using GitHub Pages)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The site you&amp;rsquo;re seeing now is made with it and I think it paid off. It feels immensely faster and this post was created simply by pushing a file into the repository. 👍&lt;/p&gt;
+
+&lt;p&gt;Hugo is probably not suited for designers or non-technical people, as the process involves some scripting knowledge. But for programmers like me, who don&amp;rsquo;t like to mess with web frontend technologies (HTML/CSS/JS) but still like to control what they&amp;rsquo;re dealing with, it&amp;rsquo;s a dream come true.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ProCamera2D at GDC16</title>
+      <link>http://www.luispedrofonseca.com/procamera2d-at-gdc16/</link>
+      <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/procamera2d-at-gdc16/</guid>
+      <description>&lt;p&gt;This year I had the honor to be invited to be part of the biggest game development conference in the world — the Game Developers Conference in San Francisco. The invite came from Unity and they were kind enough to offer me a kiosk, inside their gigantic mega-booth, where I could showcase my &lt;a href=&#34;http://www.procamera2d.com&#34; target=&#34;_blank&#34;&gt;Unity camera plugin - ProCamera2D&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/procamera2d-at-gdc16/procamera2d-booth-gdc16.jpg&#34; alt=&#34;If you look closely you can see ProCamera2D booth sign on the right&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I also got two Expo passes for the 3 days and I even got to attend Unity&amp;rsquo;s own keynote at the Intercontinental hotel (amazing breakfast included!). 😋&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/procamera2d-at-gdc16/unity-keynote-gdc16.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I got to meet so many amazing people and also a few happy ProCamera2D customers! Getting emails or reviews about the plugin is one thing, but being there in person and hearing how my work helped them it&amp;rsquo;s a pretty incredible experience.&lt;/p&gt;
+
+&lt;p&gt;Going to GDC is always super rewarding, but this year, having a booth made it even more special. Hopefully I&amp;rsquo;ll be back again next year with something else to show! ;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ProCamera2D turns 1!</title>
+      <link>http://www.luispedrofonseca.com/procamera2d-turns-1/</link>
+      <pubDate>Fri, 22 Jan 2016 09:35:51 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/procamera2d-turns-1/</guid>
+      <description>&lt;p&gt;My first commit for ProCamera2D was almost exactly 1 year ago, on January 20th 2015. It was officially released 6 months later.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/procamera2d-turns-1/Screenshot-2016-01-22-16.05.23.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Although it may sound weird to celebrate this, instead of the release date, for me it really marks a turning point. On that day I decided I was going to release my own product, no matter what, after years and years of exclusively working on clients&amp;rsquo; projects.&lt;/p&gt;
+
+&lt;p&gt;While I still work on clients&amp;rsquo; projects and I thoroughly enjoy it, there&amp;rsquo;s a deeper and more meaningful connection when the success and direction of a project is 100% under your responsibility.&lt;/p&gt;
+
+&lt;p&gt;Sometimes it was, and still is, tough having to work on ProCamera2D after a day of hard work on a client project. But the rewards that come after, more than make up for those rough days. Like for example, just this week, Klaus, a fantastic platformer game was released on PS4 and it&amp;rsquo;s using ProCamera2D!&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/DfwIJEexAE0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;Knowing my plugin is helping all kinds of different projects achieve their goals makes my heart warmer. The monetary benefits are also pretty great (more on that soon) and the experience I&amp;rsquo;ve gained with Unity editor tools has surpassed all the previous years combined.&lt;/p&gt;
+
+&lt;p&gt;My plans for ProCamera2D are still far from complete so I&amp;rsquo;m really looking forward to see how this year turns out!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning Unity iOS Game Development — Technical review</title>
+      <link>http://www.luispedrofonseca.com/learning-unity-ios-game-development-technical-review/</link>
+      <pubDate>Fri, 23 Oct 2015 11:34:16 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/learning-unity-ios-game-development-technical-review/</guid>
+      <description>&lt;p&gt;Yesterday I got in my mailbox &lt;a href=&#34;https://www.packtpub.com/game-development/learning-unity-ios-game-development&#34; target=&#34;_blank&#34;&gt;a book I technically reviewed&lt;/a&gt; for Packt. It&amp;rsquo;s a great feeling having a book with your name on it, even if not on the front page. 😀&lt;/p&gt;
+
+&lt;p&gt;As you&amp;rsquo;ve probably guessed, it&amp;rsquo;s about Unity and iOS publishing. Although you won&amp;rsquo;t find anything particularly new in there, it&amp;rsquo;s a nice package, has a few good examples and shouldn&amp;rsquo;t disappoint you. It&amp;rsquo;s a good gift for that game dev friend of yours who is just getting started. However, if you know your way around Unity and iOS, don&amp;rsquo;t expect to learn much from it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/learning-unity-ios-game-development-technical-review/learning_unity_ios_reviewers.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was my first time working with a book publisher and the process was really smooth. Packt are very fast and you can tell their workflow is super optimised. I received all the chapters for reviewal on the scheduled dates and even the release date was right on what they predicted several months earlier. Coming from a gaming background where projects are so often under-estimated I really value when a release date for another project is so accurate.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My first Unity plugin is here!</title>
+      <link>http://www.luispedrofonseca.com/my-first-unity-plugin-is-here/</link>
+      <pubDate>Thu, 30 Jul 2015 12:44:13 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/my-first-unity-plugin-is-here/</guid>
+      <description>&lt;p&gt;Hi all, long time no talk.&lt;/p&gt;
+
+&lt;p&gt;For the past few months I&amp;rsquo;ve been incredibly busy between client work and working on my first Unity plugin. This plugin started out as a little tool that I extracted from Project Cuba, but ended up becoming a full-fledged 2D camera solution so I decided to turn it into a plugin and put it on the Asset Store.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/Rzr6tjqjV60&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;It ended up taking up a lot more time than I expected due to all the work I wasn&amp;rsquo;t anticipating, mostly marketing related. I tracked everything down so maybe soon I&amp;rsquo;ll write a blog post about it.&lt;/p&gt;
+
+&lt;p&gt;In the meantime, go check it out and let me know your thoughts! 😉&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.assetstore.unity3d.com/en/#!/content/42095&#34; target=&#34;_blank&#34;&gt;ProCamera2D&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Unity Workshop</title>
+      <link>http://www.luispedrofonseca.com/unity-workshop/</link>
+      <pubDate>Wed, 18 Mar 2015 23:05:27 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/unity-workshop/</guid>
+      <description>&lt;p&gt;Past month I received an invitation to give an Unity workshop at the prestigious &lt;a href=&#34;http://www.uminho.pt/en/home_en&#34; target=&#34;_blank&#34;&gt;University of Minho&lt;/a&gt;, located in the beautiful city of &lt;a href=&#34;http://en.wikipedia.org/wiki/Braga&#34; target=&#34;_blank&#34;&gt;Braga&lt;/a&gt;. The invitation came from the extremely welcoming guys at &lt;a href=&#34;http://www.cesium.di.uminho.pt&#34; target=&#34;_blank&#34;&gt;CeSIUM&lt;/a&gt;, who were organising a week of events related to computer engineering.&lt;/p&gt;
+
+&lt;p&gt;Gladly I got a packed room with over 60 people eager to know more about Unity! This really shows how Unity is getting into the hands of users at very early stages and how the indie scene is growing in Portugal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-workshop/cesium.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The goal of the 2h workshop was to build something playable that everyone, despite their level of familiarity with Unity, could follow through.&lt;/p&gt;
+
+&lt;p&gt;We ended up doing a super basic Asteroids clone that most people managed to complete. I tried to attend as many requests and questions as possible but with so many people it was a bit hard to manage. At the end of the workshop I promised to share the source-code to those who didn&amp;rsquo;t complete it, but after looking at it again, trust me, you don&amp;rsquo;t want to be learning from a game hacked together in a 2h workshop! 😁&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-workshop/cesium_demo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Interview to CreativeBloq</title>
+      <link>http://www.luispedrofonseca.com/interview-to-creativebloq/</link>
+      <pubDate>Fri, 30 Jan 2015 14:42:19 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/interview-to-creativebloq/</guid>
+      <description>&lt;p&gt;The nice guys at &lt;a href=&#34;http://www.creativebloq.com&#34; target=&#34;_blank&#34;&gt;CreativeBloq&lt;/a&gt; contacted me to do an interview regarding my creative process, more specifically about how I used Affinity Designer on Project Cuba to speed up my development.&lt;/p&gt;
+
+&lt;p&gt;Take a look &lt;a href=&#34;http://www.creativebloq.com/how-design-game-character&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and let me know your thoughts! 😉&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Create Unity mobile icons</title>
+      <link>http://www.luispedrofonseca.com/create-unity-mobile-icons/</link>
+      <pubDate>Wed, 17 Dec 2014 16:55:39 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/create-unity-mobile-icons/</guid>
+      <description>&lt;p&gt;If you work with Unity for mobile you know the pain of creating all the required icon sizes. That&amp;rsquo;s why I created a service for OS X (sorry Windows users), that with a simple right-click on a PNG gives you the option to create and conveniently name them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/create-unity-mobile-icons/unity_create_mobile_icons.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Just select a large PNG of your icon, right-click, and then under _Services_ you&amp;rsquo;ll find &lt;em&gt;Create Unity Mobile Icons&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;To install, download &lt;a href=&#34;http://www.luispedrofonseca.com/zip/Create-Unity-Mobile-Icons.zip&#34;&gt;this zip file&lt;/a&gt; and double-click the workflow file inside.&lt;/p&gt;
+
+&lt;p&gt;Let me know how this worked for you! 😉 If you liked this, please share with the links below and &lt;a href=&#34;https://twitter.com&#34;&gt;follow me on Twitter&lt;/a&gt; for more Unity tips and tricks (and a few other random bits and pieces).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New tool — New character!</title>
+      <link>http://www.luispedrofonseca.com/new-tool-new-character/</link>
+      <pubDate>Sat, 11 Oct 2014 17:25:15 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/new-tool-new-character/</guid>
+      <description>&lt;p&gt;A month ago I wrote about why &lt;a href=&#34;http://www.luispedrofonseca.com/thank-you-adobe/&#34;&gt;I wasn&amp;rsquo;t renewing my Adobe subscription&lt;/a&gt;. At that time, I was planning to replace Photoshop and Illustrator with Pixelmator and iDraw, respectively. One month later, everything still stands, but those like me, who have been considering a change for a long time, now have one more VERY strong reason to do so.&lt;/p&gt;
+
+&lt;p&gt;A couple of weeks ago, while on vacation, I was checking my Twitter feed and someone shared a video about a new software that just got released on the App Store. At that time I thought I knew pretty much all alternatives to Adobe software out there. However, apparently the biggest contender to this &amp;ldquo;war&amp;rdquo; was hiding in the shadows ready to attack! Don&amp;rsquo;t take me wrong, Pixelmator and iDraw are both pretty cool but this one is in a totally new league of its own!&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m talking about Affinity Designer, by &lt;a href=&#34;http://www.serif.com&#34; target=&#34;_blank&#34;&gt;Serif&lt;/a&gt;. An UK company that I honestly haven&amp;rsquo;t heard of before but that I&amp;rsquo;m sure that will change from now on! Here&amp;rsquo;s an overview of Affinity Designer&amp;rsquo;s main features.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/FTxPeheWO64&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;Once I saw this video, I knew I had to try this. So I did and here&amp;rsquo;s the result of it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/new-tool-new-character/jacqueline1.png&#34; alt=&#34;Jacqueline, Jack&#39;s wife&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you look closely, you&amp;rsquo;ll notice that all my characters for &lt;a href=&#34;http://www.luispedrofonseca.com/project-cuba/&#34;&gt;Project Cuba&lt;/a&gt; have this style of flat colours with one shadow and one highlight per piece. While the technique in itself is pretty simple, achieving it in Illustrator / iDraw is not so much. However, in Affinity Designer, you can mask a shape by simply making it a child of another one!&lt;/p&gt;
+
+&lt;p&gt;Such a simple detail allowed me to make this character in MUCH less time than I would in any other software. Since then I&amp;rsquo;ve been using Affinity for the last couple of days and I keep finding small details like this that make working on it a huge pleasure.&lt;/p&gt;
+
+&lt;p&gt;If you haven&amp;rsquo;t decided already after sawing that presentation video, let me tell you, do yourself a favor and &lt;a href=&#34;https://itunes.apple.com/us/app/affinity-designer/id824171161?mt=12&#34; target=&#34;_blank&#34;&gt;go get it&lt;/a&gt;!!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project Cuba Main Character progress</title>
+      <link>http://www.luispedrofonseca.com/project-cuba-main-character-progress/</link>
+      <pubDate>Sun, 21 Sep 2014 21:45:09 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/project-cuba-main-character-progress/</guid>
+      <description>&lt;p&gt;Recently I was digging through some of my files and found the various iterations of Jack, the main character of my upcoming game, Project Cuba.&lt;/p&gt;
+
+&lt;p&gt;While the process itself was fairly simple and quick I think it&amp;rsquo;s worth to share because it shows a different approach of the typical process. Since my hand drawing skills are very limited I opted to jump straight into Illustrator. While this is probably a lot slower for someone that knows how to put their thoughts in paper and only then trace them. For me, it allows to slowly progress into what I have in my head and at the same time it gives me flexibility to make bold changes and not worrying about ruining it. In fact, most of the time is by doing bold changes (or mistakes) that you end up finding that cool detail you were not initially planning.&lt;/p&gt;
+
+&lt;p&gt;That said, here&amp;rsquo;s the final result. Hope you like and let me know your thoughts! 😉&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/project-cuba-main-character-progress/jack_progress.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project Cuba First Audio Test</title>
+      <link>http://www.luispedrofonseca.com/project-cuba-first-audio-test/</link>
+      <pubDate>Sat, 13 Sep 2014 15:02:25 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/project-cuba-first-audio-test/</guid>
+      <description>&lt;p&gt;While at this point I&amp;rsquo;d like to be showing you some Project Cuba gameplay, the truth is that progress on that regard has been slower than expected. I&amp;rsquo;ve been super busy with some client projects and when I do have some time, there&amp;rsquo;s still plenty to do before my perfectionist self puts some gameplay out there.  But please don&amp;rsquo;t despair, it&amp;rsquo;s coming soon! 😁&lt;/p&gt;
+
+&lt;p&gt;However, this week I&amp;rsquo;m bringing you the first musical piece for the game. My super talented friend, Sérgio Ferreira, will be taking the lead on the audio side and this week he sent me the first test for one of the main themes. I honestly think it&amp;rsquo;s amazing and he definitely captured exactly the mood I want to bring for the game.&lt;/p&gt;
+
+&lt;p&gt;Without further ado, please download and let me know your thoughts! 😉&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.luispedrofonseca.com/audio/project-cuba-first-audio-test/project_cuba_theme1.mp3&#34;&gt;Download!&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spine IK is here!</title>
+      <link>http://www.luispedrofonseca.com/spine-ik-is-here/</link>
+      <pubDate>Sat, 06 Sep 2014 21:34:36 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/spine-ik-is-here/</guid>
+      <description>&lt;p&gt;One of the coolest features for &lt;a href=&#34;http://esotericsoftware.com&#34; target=&#34;_blank&#34;&gt;Spine&lt;/a&gt; is finally ready for prime-time. The inverse kinematics (IK) has been in the works for a few months already but it&amp;rsquo;s now available in the editor and on a wide range of the &lt;a href=&#34;https://github.com/EsotericSoftware/spine-runtimes&#34; target=&#34;_blank&#34;&gt;supported runtimes&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/orqb4Hz4rqI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;For now, I&amp;rsquo;ve only been doing some quick tests but I already have a few ideas on how I can put this to good use on Project Cuba. Stay tuned and &lt;a href=&#34;https://twitter.com/lpfonseca&#34; target=&#34;_blank&#34;&gt;follow me on Twitter&lt;/a&gt; for more on Project Cuba coming soon!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/spine-ik-is-here/Project_Cuba_IK.gif&#34; alt=&#34;Jack&#39;s legs IK Test&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thank you Adobe!</title>
+      <link>http://www.luispedrofonseca.com/thank-you-adobe/</link>
+      <pubDate>Sat, 30 Aug 2014 02:04:28 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/thank-you-adobe/</guid>
+      <description>
+
+&lt;p&gt;We&amp;rsquo;ve had a great journey together but it&amp;rsquo;s time to say goodbye!&amp;hellip; Although&amp;hellip; It&amp;rsquo;s your fault and let me explain why&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Ever since I&amp;rsquo;ve started working professionally on the creative industry more than 10 years ago, Adobe software has been the standard by which every designer measured their software skills. For the most part this still holds true nowadays, but the tides are changing rapidly it and will probably be too overwhelming for Adobe to handle.&lt;/p&gt;
+
+&lt;h2 id=&#34;nimbleness&#34;&gt;Nimbleness&lt;/h2&gt;
+
+&lt;p&gt;Most Adobe products are now authentic dinosaurs (measured in tech-years). The &lt;a href=&#34;http://en.wikipedia.org/wiki/Adobe_Photoshop_version_history&#34; target=&#34;_blank&#34;&gt;first commercial release of Photoshop was in March, 1989&lt;/a&gt;! This effectively makes it one of the oldest softwares still being actively used! While age in most cases means experience, in the software world also means a big baggage of legacy code, which in turn, usually results in a pile of outdated features and bugs.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s face it, Adobe can&amp;rsquo;t simply redesign Photoshop (or any of their other major products) from the ground-up and hope that their several million users love the new version. We all know how people react to change, and everybody saw what happened when Adobe replaced FreeHand with Illustrator — there are still people today swearing FreeHand is/was better than Illustrator!&lt;/p&gt;
+
+&lt;p&gt;This lack of innovation that Adobe is tied to, is exactly what the other software companies have to their favour. They can afford to bring new, bold and exciting features pretty much on every release. Since the typical users of these softwares are more likely to embrace change, it&amp;rsquo;s a win-win situation.&lt;/p&gt;
+
+&lt;h2 id=&#34;price&#34;&gt;Price&lt;/h2&gt;
+
+&lt;p&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;a href=&#34;https://twitter.com/lpfonseca/status/502766044323520512&#34; target=&#34;_blank&#34;&gt;I&lt;/a&gt;&lt;/span&gt;  &lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=78yigV0GYGQ&#34; target=&#34;_blank&#34;&gt;won&amp;rsquo;t&lt;/a&gt;&lt;/span&gt;  &lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;a href=&#34;https://forums.adobe.com/message/4404665&#34; target=&#34;_blank&#34;&gt;even&lt;/a&gt;&lt;/span&gt; talk about the prices Adobe practices outside United States, but their change to a subscription based service surely doesn&amp;rsquo;t fit everyone as &lt;a href=&#34;http://www.fastcodesign.com/1672530/adobe-5-reasons-we-killed-the-creative-suite&#34; target=&#34;_blank&#34;&gt;they seem to think&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Basically, for $600 you get all their products for one year, after that you have to keep paying the monthly fee or you lose all the access to their software. &lt;a href=&#34;https://creative.adobe.com/plans&#34; target=&#34;_blank&#34;&gt;There are other plans&lt;/a&gt; too, but in all honesty they are ridiculous, especially if you just intend to use 2 or 3 of their products.&lt;/p&gt;
+
+&lt;p&gt;While I can understand how this works best for Adobe, for a lot of users it doesn&amp;rsquo;t. When for $55 you can buy both &lt;a href=&#34;https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12&amp;ign-mpt=uo%3D4&#34; target=&#34;_blank&#34;&gt;Pixelmator&lt;/a&gt; and &lt;a href=&#34;https://itunes.apple.com/us/app/idraw/id404705039?mt=12&amp;ign-mpt=uo%3D4&#34; target=&#34;_blank&#34;&gt;iDraw&lt;/a&gt;, and effectively own them for the &lt;strong&gt;rest of your life&lt;/strong&gt;, it makes it REALLY hard to justify the $480 Adobe charges for &lt;strong&gt;one year&lt;/strong&gt; of Photoshop and Illustrator.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-now&#34;&gt;What now?&lt;/h2&gt;
+
+&lt;p&gt;As you&amp;rsquo;ve probably guessed by now, my Adobe subscription ended a couple of weeks ago and yes, I&amp;rsquo;m not renewing it. After several trials and tests I&amp;rsquo;ve found incredibly powerful and capable replacements for the two Adobe products I used the most.&lt;/p&gt;
+
+&lt;p&gt;Now, I&amp;rsquo;m not saying that everyone should do the same or even that these alternatives fit everyone and every need. However, in my specific case, and I think in many others too, they perfectly cover all my use cases, with a lot of room to grow, while at the same time saving me quite a few bucks.&lt;/p&gt;
+
+&lt;p&gt;While I&amp;rsquo;m not a professional artist or designer, &lt;a href=&#34;http://www.luispedrofonseca.com/about/&#34;&gt;my skills lie elsewhere&lt;/a&gt;, doing my &lt;a href=&#34;http://www.luispedrofonseca.com/project-cuba/&#34;&gt;personal projects&lt;/a&gt; as an one-man team, forces me to constantly re-evaluate my methodology. Since I believe Adobe &lt;a href=&#34;http://www.smashingmagazine.com/2013/04/22/repurposing-photoshop/&#34; target=&#34;_blank&#34;&gt;no longer gives a competitive edge&lt;/a&gt;, we&amp;rsquo;re going our separate ways.&lt;/p&gt;
+
+&lt;p&gt;Would love to hear your opinion on this subject so feel free to comment here or &lt;a href=&#34;https://twitter.com/lpfonseca&#34; target=&#34;_blank&#34;&gt;follow me on Twitter&lt;/a&gt; for further discussion!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

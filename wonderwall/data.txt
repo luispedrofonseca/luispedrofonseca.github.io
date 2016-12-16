@@ -1,0 +1,3 @@
+//SceneTitle,AssetBundleURL,version
+Extra Christmas,http://www.luispedrofonseca.com/wonderwall/sceneextra1,1
+Extra Disney,http://www.luispedrofonseca.com/wonderwall/sceneextra2,1

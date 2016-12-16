@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 514428073
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 413b35a4b818813f7608f2c6c378b2c5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 739e1a6bd5ca10d10e676263118eeac3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1a4a22d479a654c6b96e8ce13b4125af, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundles/Content/Disney/texture_disney1.jpg
+- Assets/AssetBundles/Content/Disney/SceneTemplateDisney.asset
+- Assets/AssetBundles/Content/Disney/video_disney_thumb.png
+- Assets/AssetBundles/Content/Disney/texture_disney1_thumb.png
+- Assets/AssetBundles/Content/Disney/template_disney.png
+Dependencies: []

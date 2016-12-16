@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>New site engine — Hugo &middot; Luís Pedro Fonseca</title>
+    <meta name="generator" content="Hugo 0.17" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Luís Pedro Fonseca">
+    
+      <meta name="description" content="Freelance Unity Game Developer">
+    
+    
+    <link rel="icon" href="http://www.luispedrofonseca.com/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.luispedrofonseca.com/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://www.luispedrofonseca.com/css/style.css">
+    <link rel="stylesheet" href="http://www.luispedrofonseca.com/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.luispedrofonseca.com/css/monokai.css">
+    <link rel="stylesheet" href="http://www.luispedrofonseca.com/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="New site engine — Hugo" />
+<meta property="og:description" content="Ever since I started with this blog/website, publishing a new post, updating some information or even tweaking its layout, has always been a chore.
+This website was made with Wordpress because that&rsquo;s pretty much the standard when you&rsquo;re planning to start a blog. Your host provider gives you a very convenient one-click install solution and you can be up and running in a matter of minutes. There are an infinite number of plugins for every possible use-case you can think of and even more themes to customize its look." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.luispedrofonseca.com/new-site-engine-hugo/" />
+
+
+<meta property="og:updated_time" content="2016-06-12T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="New site engine — Hugo">
+<meta itemprop="description" content="Ever since I started with this blog/website, publishing a new post, updating some information or even tweaking its layout, has always been a chore.
+This website was made with Wordpress because that&rsquo;s pretty much the standard when you&rsquo;re planning to start a blog. Your host provider gives you a very convenient one-click install solution and you can be up and running in a matter of minutes. There are an infinite number of plugins for every possible use-case you can think of and even more themes to customize its look.">
+
+
+<meta itemprop="dateModified" content="2016-06-12T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="264">
+
+
+
+<meta itemprop="keywords" content="csharp,plugins,procamera2d,project-cuba,uncategorized,unity," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="New site engine — Hugo"/>
+<meta name="twitter:description" content="Ever since I started with this blog/website, publishing a new post, updating some information or even tweaking its layout, has always been a chore.
+This website was made with Wordpress because that&rsquo;s pretty much the standard when you&rsquo;re planning to start a blog. Your host provider gives you a very convenient one-click install solution and you can be up and running in a matter of minutes. There are an infinite number of plugins for every possible use-case you can think of and even more themes to customize its look."/>
+<meta name="twitter:site" content="@lpfonseca"/>
+
+
+    
+
+    
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://www.luispedrofonseca.com/" id="logo">
+        
+        <span class="site-title">Luís Pedro Fonseca</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://www.luispedrofonseca.com/">Blog</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.luispedrofonseca.com/about">About</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.luispedrofonseca.com/contact">Contact</a>
+          
+          
+
+          
+
+          
+          
+          
+          
+          
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://www.luispedrofonseca.com/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://www.luispedrofonseca.com/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://www.luispedrofonseca.com/">Blog</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.luispedrofonseca.com/about">About</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.luispedrofonseca.com/contact">Contact</a></td>
+          
+          
+
+          
+
+          
+          
+          
+          
+          
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://www.luispedrofonseca.com/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://www.luispedrofonseca.com/avatar.png">
+      <h2 id="name">Luís Pedro Fonseca</h2>
+      <h3 id="title">Senior developer @<a href="http://www.x-team.com">X-Team</a><br>Part-time indie game developer<br><a href="http://www.procamera2d.com">ProCamera2D</a> plugin author</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Porto, Portugal</span>
+      
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/lpfonseca" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+    <div></div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                
+                <img src="http://www.luispedrofonseca.com/banners/new-site-engine-hugo.jpg" class="article-banner">
+                
+            
+
+            <header class="article-header">
+    <a href="http://www.luispedrofonseca.com/new-site-engine-hugo/">
+    <h1 class="article-title" itemprop="name">
+        New site engine — Hugo
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2016-06-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-06-12</time>
+            
+        </div>
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://www.luispedrofonseca.com/categories/uncategorized">Uncategorized</a>
+                
+                
+            </div>
+            
+        
+
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>Ever since I started with this blog/website, publishing a new post, updating some information or even tweaking its layout, has always been a chore.</p>
+
+<p>This website was made with Wordpress because that&rsquo;s pretty much the standard when you&rsquo;re planning to start a blog. Your host provider gives you a very convenient one-click install solution and you can be up and running in a matter of minutes. There are an infinite number of plugins for every possible use-case you can think of and even more themes to customize its look.</p>
+
+<p>However, this comes with a cost. The more plugins you add, or the more complex your theme gets, the slower you site will be. These issues are probably easy to fix with some more advanced Wordpress knowledge. But, I wanted to simplify and get rid of all the garbage that was making my website sluggish and a pain to update.</p>
+
+<p>After some research, I found <a href="http://gohugo.io" target="_blank">Hugo</a>. It had everything I needed:</p>
+
+<ul>
+<li>Easy installation and setup</li>
+<li>Blazing-fast speed</li>
+<li>Support for content written in Markdown</li>
+<li>Syntax highlighting for code snippets</li>
+<li>Customizable themes</li>
+<li>Anywhere hosting (I&rsquo;m using GitHub Pages)</li>
+</ul>
+
+<p>The site you&rsquo;re seeing now is made with it and I think it paid off. It feels immensely faster and this post was created simply by pushing a file into the repository. 👍</p>
+
+<p>Hugo is probably not suited for designers or non-technical people, as the process involves some scripting knowledge. But for programmers like me, who don&rsquo;t like to mess with web frontend technologies (HTML/CSS/JS) but still like to control what they&rsquo;re dealing with, it&rsquo;s a dream come true.</p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.luispedrofonseca.com/new-site-engine-hugo/" data-id="6a71206f66f7bf7d43671447fedf50a0" class="article-share-link">
+        Share
+    </a>
+    
+    <a href="http://www.luispedrofonseca.com/new-site-engine-hugo//#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.luispedrofonseca.com/procamera2d-at-gdc16/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">ProCamera2D at GDC16</div>
+    </a>
+    
+
+    
+    <a href="http://www.luispedrofonseca.com/unity-custom-rect-editor/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Unity Custom Rect Editor</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'luspedrofonseca';
+    var disqus_identifier = 'http:\/\/www.luispedrofonseca.com\/new-site-engine-hugo\/';
+    var disqus_title = 'New site engine — Hugo';
+    var disqus_url = 'http:\/\/www.luispedrofonseca.com\/new-site-engine-hugo\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Latest Posts
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/unite-los-angeles-16/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/unity-awards-16.png)" alt="New site engine — Hugo" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/unite-los-angeles-16/" class="title">Unite Los Angeles 16</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-11-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-11-08</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/unity-custom-rect-editor/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/unity-custom-rect-editor.png)" alt="New site engine — Hugo" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/unity-custom-rect-editor/" class="title">Unity Custom Rect Editor</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-10-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-10-08</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/new-site-engine-hugo/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/new-site-engine-hugo.jpg)" alt="New site engine — Hugo" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/new-site-engine-hugo/" class="title">New site engine — Hugo</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-06-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-06-12</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/procamera2d-at-gdc16/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/procamera2d-at-gdc16.jpg)" alt="New site engine — Hugo" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/procamera2d-at-gdc16/" class="title">ProCamera2D at GDC16</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-04-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-04-10</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.luispedrofonseca.com/procamera2d-turns-1/" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://www.luispedrofonseca.com/banners/procamera2d_anniversary.png)" alt="New site engine — Hugo" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-title"><a href="http://www.luispedrofonseca.com/procamera2d-turns-1/" class="title">ProCamera2D turns 1!</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-01-22 09:35:51 &#43;0000 UTC" itemprop="datePublished">2016-01-22</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/csharp">
+                    csharp
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/plugins">
+                    plugins
+                </a>
+                <span class="category-list-count">10</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/procamera2d">
+                    procamera2d
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/project-cuba">
+                    project-cuba
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/uncategorized">
+                    uncategorized
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://www.luispedrofonseca.com/categories/unity">
+                    unity
+                </a>
+                <span class="category-list-count">15</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+    
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Luís Pedro Fonseca. All Rights Reserved. Website powered by <a href="//gohugo.io">Hugo</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://www.luispedrofonseca.com/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://www.luispedrofonseca.com/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 1825380680
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 96e1eca986a8a9c47b6580aaf6ce35cf
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 739e1a6bd5ca10d10e676263118eeac3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1a4a22d479a654c6b96e8ce13b4125af, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundles/Content/Christmas/SceneTemplateChristmas.asset
+- Assets/AssetBundles/Content/Christmas/texture_christmas2.jpg
+- Assets/AssetBundles/Content/Christmas/texture_christmas1_thumb.png
+- Assets/AssetBundles/Content/Christmas/video_christmas_thumb.png
+- Assets/AssetBundles/Content/Christmas/texture_christmas1.jpg
+- Assets/AssetBundles/Content/Christmas/template_christmas.png
+- Assets/AssetBundles/Content/Christmas/texture_christmas2_thumb.png
+Dependencies: []
