@@ -32,27 +32,6 @@
     </item>
     
     <item>
-      <title>Unite Los Angeles 16</title>
-      <link>http://www.luispedrofonseca.com/unite-los-angeles-16/</link>
-      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.luispedrofonseca.com/unite-los-angeles-16/</guid>
-      <description>&lt;p&gt;It was with great pleasure and pride that I learnt that ProCamera2D got nominated to this year&amp;rsquo;s Unity Awards! The award cerimony took place in Los Angeles, on the first evening of the Unite 16 conference.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately I didn&amp;rsquo;t win, but being a finalist was more than I ever expected. The winner was &lt;a href=&#34;https://www.assetstore.unity3d.com/en/#!/content/53895&#34; target=&#34;_blank&#34;&gt;Dungeon Architect&lt;/a&gt;. Congratulations to Code Respawn and all the other nominees! They were all amazing and I&amp;rsquo;m very proud to be part of this group.&lt;/p&gt;
-
-&lt;p&gt;I also took the opportunity of going to the conference to spread the word about Pro Camera 2D. I had a booth for one day and like at GDC 16, it was a blast! I got to show the plugin to a lot of visitors and also got to meet some happy customers. I even got to meet (and take a picture) of the creator and visionary behind Unity - Mr. David Helgasson!&lt;/p&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;With the one and only &lt;a href=&#34;https://twitter.com/davidhelgason&#34;&gt;@davidhelgason&lt;/a&gt;! Super proud to hear his nice words about the plugin! :) &lt;a href=&#34;https://twitter.com/hashtag/unity3d?src=hash&#34;&gt;#unity3d&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/gamedev?src=hash&#34;&gt;#gamedev&lt;/a&gt; &lt;a href=&#34;https://t.co/XVO4i6PwCu&#34;&gt;pic.twitter.com/XVO4i6PwCu&lt;/a&gt;&lt;/p&gt;&amp;mdash; Luís Pedro Fonseca (@lpfonseca) &lt;a href=&#34;https://twitter.com/lpfonseca/status/793951852152770560&#34;&gt;November 2, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;The conference was at the Loews Hollywood Hotel, and while a beautiful venue in an iconic location (right in front of the Hollywood Chinese Theatre / Walk of Fame), it had a few issues. The talks were on the 5th floor and the Expo Hall was on the 3rd. This meant that attendees had to go up and down between floors and that got tiring very quickly. It also meant that some people didn&amp;rsquo;t get to visit as much of the Expo Hall / Made With Unity as they probably would like.&lt;/p&gt;
-
-&lt;p&gt;All in all, it was a great experience! Seeing first-hand what Unity has in store for the next few versions was exciting and I can&amp;rsquo;t wait to start exploring all the new features. You can learn more about those in this &lt;a href=&#34;https://blogs.unity3d.com/2016/11/01/unite-2016-keynote-wrap-up-news-on-graphics-platforms-vr-and-more/&#34; target=&#34;_blank&#34;&gt;Unity&amp;rsquo;s blog post&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Unity Custom Rect Editor</title>
       <link>http://www.luispedrofonseca.com/unity-custom-rect-editor/</link>
       <pubDate>Sat, 08 Oct 2016 00:00:00 +0000</pubDate>
@@ -355,6 +334,46 @@ public class RectExampleEditor : Editor
 &lt;p&gt;For now, I&amp;rsquo;ve only been doing some quick tests but I already have a few ideas on how I can put this to good use on Project Cuba. Stay tuned and &lt;a href=&#34;https://twitter.com/lpfonseca&#34; target=&#34;_blank&#34;&gt;follow me on Twitter&lt;/a&gt; for more on Project Cuba coming soon!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/spine-ik-is-here/Project_Cuba_IK.gif&#34; alt=&#34;Jack&#39;s legs IK Test&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thank you Adobe!</title>
+      <link>http://www.luispedrofonseca.com/thank-you-adobe/</link>
+      <pubDate>Sat, 30 Aug 2014 02:04:28 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/thank-you-adobe/</guid>
+      <description>
+
+&lt;p&gt;We&amp;rsquo;ve had a great journey together but it&amp;rsquo;s time to say goodbye!&amp;hellip; Although&amp;hellip; It&amp;rsquo;s your fault and let me explain why&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Ever since I&amp;rsquo;ve started working professionally on the creative industry more than 10 years ago, Adobe software has been the standard by which every designer measured their software skills. For the most part this still holds true nowadays, but the tides are changing rapidly it and will probably be too overwhelming for Adobe to handle.&lt;/p&gt;
+
+&lt;h2 id=&#34;nimbleness&#34;&gt;Nimbleness&lt;/h2&gt;
+
+&lt;p&gt;Most Adobe products are now authentic dinosaurs (measured in tech-years). The &lt;a href=&#34;http://en.wikipedia.org/wiki/Adobe_Photoshop_version_history&#34; target=&#34;_blank&#34;&gt;first commercial release of Photoshop was in March, 1989&lt;/a&gt;! This effectively makes it one of the oldest softwares still being actively used! While age in most cases means experience, in the software world also means a big baggage of legacy code, which in turn, usually results in a pile of outdated features and bugs.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s face it, Adobe can&amp;rsquo;t simply redesign Photoshop (or any of their other major products) from the ground-up and hope that their several million users love the new version. We all know how people react to change, and everybody saw what happened when Adobe replaced FreeHand with Illustrator — there are still people today swearing FreeHand is/was better than Illustrator!&lt;/p&gt;
+
+&lt;p&gt;This lack of innovation that Adobe is tied to, is exactly what the other software companies have to their favour. They can afford to bring new, bold and exciting features pretty much on every release. Since the typical users of these softwares are more likely to embrace change, it&amp;rsquo;s a win-win situation.&lt;/p&gt;
+
+&lt;h2 id=&#34;price&#34;&gt;Price&lt;/h2&gt;
+
+&lt;p&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;a href=&#34;https://twitter.com/lpfonseca/status/502766044323520512&#34; target=&#34;_blank&#34;&gt;I&lt;/a&gt;&lt;/span&gt;  &lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=78yigV0GYGQ&#34; target=&#34;_blank&#34;&gt;won&amp;rsquo;t&lt;/a&gt;&lt;/span&gt;  &lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;a href=&#34;https://forums.adobe.com/message/4404665&#34; target=&#34;_blank&#34;&gt;even&lt;/a&gt;&lt;/span&gt; talk about the prices Adobe practices outside United States, but their change to a subscription based service surely doesn&amp;rsquo;t fit everyone as &lt;a href=&#34;http://www.fastcodesign.com/1672530/adobe-5-reasons-we-killed-the-creative-suite&#34; target=&#34;_blank&#34;&gt;they seem to think&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Basically, for $600 you get all their products for one year, after that you have to keep paying the monthly fee or you lose all the access to their software. &lt;a href=&#34;https://creative.adobe.com/plans&#34; target=&#34;_blank&#34;&gt;There are other plans&lt;/a&gt; too, but in all honesty they are ridiculous, especially if you just intend to use 2 or 3 of their products.&lt;/p&gt;
+
+&lt;p&gt;While I can understand how this works best for Adobe, for a lot of users it doesn&amp;rsquo;t. When for $55 you can buy both &lt;a href=&#34;https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12&amp;ign-mpt=uo%3D4&#34; target=&#34;_blank&#34;&gt;Pixelmator&lt;/a&gt; and &lt;a href=&#34;https://itunes.apple.com/us/app/idraw/id404705039?mt=12&amp;ign-mpt=uo%3D4&#34; target=&#34;_blank&#34;&gt;iDraw&lt;/a&gt;, and effectively own them for the &lt;strong&gt;rest of your life&lt;/strong&gt;, it makes it REALLY hard to justify the $480 Adobe charges for &lt;strong&gt;one year&lt;/strong&gt; of Photoshop and Illustrator.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-now&#34;&gt;What now?&lt;/h2&gt;
+
+&lt;p&gt;As you&amp;rsquo;ve probably guessed by now, my Adobe subscription ended a couple of weeks ago and yes, I&amp;rsquo;m not renewing it. After several trials and tests I&amp;rsquo;ve found incredibly powerful and capable replacements for the two Adobe products I used the most.&lt;/p&gt;
+
+&lt;p&gt;Now, I&amp;rsquo;m not saying that everyone should do the same or even that these alternatives fit everyone and every need. However, in my specific case, and I think in many others too, they perfectly cover all my use cases, with a lot of room to grow, while at the same time saving me quite a few bucks.&lt;/p&gt;
+
+&lt;p&gt;While I&amp;rsquo;m not a professional artist or designer, &lt;a href=&#34;http://www.luispedrofonseca.com/about/&#34;&gt;my skills lie elsewhere&lt;/a&gt;, doing my &lt;a href=&#34;http://www.luispedrofonseca.com/project-cuba/&#34;&gt;personal projects&lt;/a&gt; as an one-man team, forces me to constantly re-evaluate my methodology. Since I believe Adobe &lt;a href=&#34;http://www.smashingmagazine.com/2013/04/22/repurposing-photoshop/&#34; target=&#34;_blank&#34;&gt;no longer gives a competitive edge&lt;/a&gt;, we&amp;rsquo;re going our separate ways.&lt;/p&gt;
+
+&lt;p&gt;Would love to hear your opinion on this subject so feel free to comment here or &lt;a href=&#34;https://twitter.com/lpfonseca&#34; target=&#34;_blank&#34;&gt;follow me on Twitter&lt;/a&gt; for further discussion!&lt;/p&gt;
 </description>
     </item>
     
