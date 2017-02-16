@@ -16,21 +16,21 @@
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/unity-vr-joystick/</guid>
-      <description>&lt;p&gt;For the past year I&amp;rsquo;ve become more and more interested in virtual reality, especially after trying out a bunch of demos at the last Unite in LA. So much, that I&amp;rsquo;ve decided to go ahead and buy an &lt;a href=&#34;http://www.vive.com&#34; target=&#34;_blank&#34;&gt;HTC Vive&lt;/a&gt;. Being a new technology, it&amp;rsquo;s still quite expensive, not only for the device itself but also because you need to have a pretty beefy PC to support it. I&amp;rsquo;ve put together an &lt;a href=&#34;https://www.tonymacx86.com&#34; target=&#34;_blank&#34;&gt;Hackintosh&lt;/a&gt; (maybe more about that in a future post), so I can still use OSX for my daily job but also run Windows which is a requirement for desktop VR.&lt;/p&gt;
+      <description>&lt;p&gt;For the past year, I have become more and more interested in virtual reality, especially after trying out a bunch of demos at the last Unite in LA. So much, in fact, that I have decided to go ahead and buy an &lt;a href=&#34;http://www.vive.com&#34; target=&#34;_blank&#34;&gt;HTC Vive&lt;/a&gt;. Being a new technology, it is still quite expensive, not only because of the price of the device itself but also because you need to have a pretty beefy PC to support it. I have put together a &lt;a href=&#34;https://www.tonymacx86.com&#34; target=&#34;_blank&#34;&gt;Hackintosh&lt;/a&gt; (maybe more about that in a future post), so I can still use OSX for my daily job but also run Windows which is a requirement for desktop VR.&lt;/p&gt;
 
-&lt;p&gt;To put the Vive to good use I&amp;rsquo;ve decided to create a simple flying game. The first challenge I faced was how could we control a plane using only the Vive controllers? The solution that made most sense to me was to recreate an airplane joystick (aka HOTAS), inside the game itself and then let the player grab it and move it using its own hands like in real life.&lt;/p&gt;
+&lt;p&gt;To put the Vive to good use I have decided to create a simple flying game. The first challenge I faced was figuring out how to control a plane using only the Vive controllers. The solution that made most sense to me was to recreate an airplane joystick (aka HOTAS), inside the game itself and then let the player grab it and move it using their own hands like in real life.&lt;/p&gt;
 
 &lt;p&gt;This is how it looks:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-vr-joystick/unity-vr-joystick.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;To speed up the development I&amp;rsquo;ve been using the amazing &lt;a href=&#34;https://github.com/thestonefox/VRTK&#34; target=&#34;_blank&#34;&gt;VRTK library&lt;/a&gt; which is a collection of useful scripts and concepts to aid building VR solutions rapidly. It handles stuff like locomotion, interactions, physics, UI, etc. If you&amp;rsquo;re planning to develop in VR using Unity, trust me, you&amp;rsquo;ll want to use this library. Best of all, it&amp;rsquo;s free and open-source!&lt;/p&gt;
+&lt;p&gt;To speed up the development, I have been using the amazing &lt;a href=&#34;https://github.com/thestonefox/VRTK&#34; target=&#34;_blank&#34;&gt;VRTK library&lt;/a&gt; which is a collection of useful scripts and concepts to aid building VR solutions rapidly. It handles stuff like locomotion, interactions, physics, UI, etc. If you are planning to develop in VR using Unity, trust me, you will want to use this library. Best of all, it is free and open-source!&lt;/p&gt;
 
-&lt;p&gt;Using VRTK made things really simple and all I had to do was to create a configurable joint between the stick and the base. Here are the settings I used:&lt;/p&gt;
+&lt;p&gt;Using VRTK made things really simple and all I had to do was create a configurable joint between the stick and the base. Here are the settings I used:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-vr-joystick/unity-vr-joystick-configurable-joint.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;After creating the configurable joint, you&amp;rsquo;ll need to create a new class that overrides the VRTK_InteractableObject class (from the VRTK library I mentioned earlier). This class gives all you need to know when the player grabbed, dropped or moved the joystick. With this in place you now have all the data needed to maneuver the plane, including the roll and pitch (mapped to XPercentage and ZPercentage here):&lt;/p&gt;
+&lt;p&gt;After creating the configurable joint, you will need to create a new class that overrides the VRTK_InteractableObject class (from the VRTK library I mentioned earlier). This class provides everything you need to know about when the player grabbed, dropped or moved the joystick. With this in place, you now have all the data needed to maneuver the plane, including the roll and pitch (mapped to XPercentage and ZPercentage here):&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;using System;
 using System.Collections;
