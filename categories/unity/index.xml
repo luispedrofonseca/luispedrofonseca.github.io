@@ -164,6 +164,160 @@ Let me know what you think about this solution and if you have any doubts about 
     </item>
     
     <item>
+      <title>Unity VR Joystick</title>
+      <link>http://www.luispedrofonseca.com/unity-vr-joystick/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/unity-vr-joystick/</guid>
+      <description>&lt;p&gt;For the past year, I have become more and more interested in virtual reality, especially after trying out a bunch of demos at the last Unite in LA. So much, in fact, that I have decided to go ahead and buy an &lt;a href=&#34;http://www.vive.com&#34; target=&#34;_blank&#34;&gt;HTC Vive&lt;/a&gt;. Being a new technology, it is still quite expensive, not only because of the price of the device itself but also because you need to have a pretty beefy PC to support it. I have put together a &lt;a href=&#34;https://www.tonymacx86.com&#34; target=&#34;_blank&#34;&gt;Hackintosh&lt;/a&gt; (maybe more about that in a future post), so I can still use OSX for my daily job but also run Windows which is a requirement for desktop VR.&lt;/p&gt;
+
+&lt;p&gt;To put the Vive to good use I have decided to create a simple flying game. The first challenge I faced was figuring out how to control a plane using only the Vive controllers. The solution that made most sense to me was to recreate an airplane joystick (aka HOTAS), inside the game itself and then let the player grab it and move it using their own hands like in real life.&lt;/p&gt;
+
+&lt;p&gt;This is how it looks:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-vr-joystick/unity-vr-joystick.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To speed up the development, I have been using the amazing &lt;a href=&#34;https://github.com/thestonefox/VRTK&#34; target=&#34;_blank&#34;&gt;VRTK library&lt;/a&gt; which is a collection of useful scripts and concepts to aid building VR solutions rapidly. It handles stuff like locomotion, interactions, physics, UI, etc. If you are planning to develop in VR using Unity, trust me, you will want to use this library. Best of all, it is free and open-source!&lt;/p&gt;
+
+&lt;p&gt;Using VRTK made things really simple and all I had to do was create a configurable joint between the stick and the base. Here are the settings I used:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-vr-joystick/unity-vr-joystick-configurable-joint.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After creating the configurable joint, you will need to create a new class that overrides the VRTK_InteractableObject class (from the VRTK library I mentioned earlier). This class provides everything you need to know about when the player grabbed, dropped or moved the joystick. With this in place, you now have all the data needed to maneuver the plane, including the roll and pitch (mapped to XPercentage and ZPercentage here):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;using System;
+using System.Collections;
+using UnityEngine;
+using VRTK;
+
+public class VRJoystick : VRTK_InteractableObject
+{
+    public Action OnUseStarted;
+    public Action OnUseStopped;
+
+    [Header(&amp;quot;Joystick&amp;quot;)]
+    [SerializeField]
+    Transform _handle;
+
+    [SerializeField]
+    float _maxXAngle = 45;
+
+    [SerializeField]
+    float _maxZAngle = 45;
+
+    [SerializeField]
+    [Range(0, 1)]
+    float _vibrationStrenght = .1f;
+
+    [SerializeField]
+    [Range(0, 1)]
+    float _vibrationInterval = .05f;
+
+    public float XPercentage;
+    public float ZPercentage;
+
+    VRTK_ControllerActions _controllerActions;
+
+    bool _grabbing;
+    
+    override protected void Update ()
+    {
+        base.Update();
+
+        var angleX = _handle.localRotation.eulerAngles.x;
+        if (angleX &amp;gt; 180)
+            angleX -= 360;
+
+        var angleZ = _handle.localRotation.eulerAngles.z;
+        if (angleZ &amp;gt; 180)
+            angleZ -= 360;
+
+        XPercentage = angleX / _maxXAngle;
+        ZPercentage = angleZ / _maxZAngle;
+    }
+
+    public override void StartTouching(GameObject currentTouchingObject)
+    {
+        base.StartTouching(currentTouchingObject);
+        _controllerActions = currentTouchingObject.GetComponent&amp;lt;VRTK_ControllerActions&amp;gt;();
+        Vibrate(.5f);
+    }
+
+    public override void StopTouching(GameObject previousTouchingObject)
+    {
+        base.StopTouching(previousTouchingObject);
+        _controllerActions = previousTouchingObject.GetComponent&amp;lt;VRTK_ControllerActions&amp;gt;();
+        Vibrate(.5f);
+    }
+    
+    override public void Grabbed(GameObject grabbingObject)
+    {
+        base.Grabbed(grabbingObject);
+        _controllerActions = grabbingObject.GetComponent&amp;lt;VRTK_ControllerActions&amp;gt;();
+        Vibrate(.5f);
+        _grabbing = true;
+
+        StartCoroutine(DetectJoystickMovement());
+    }
+
+    override public void Ungrabbed(GameObject previousGrabbingObject)
+    {
+        base.Ungrabbed(previousGrabbingObject);
+
+        _grabbing = false;
+    }
+
+    IEnumerator DetectJoystickMovement()
+    {
+        var currentXPercentage = XPercentage;
+        var currentZPercentage = ZPercentage;
+        while (_grabbing)
+        {
+            if(Mathf.Abs(currentXPercentage - XPercentage) &amp;gt; _vibrationInterval)
+            {
+                Vibrate(_vibrationStrenght);
+                currentXPercentage = XPercentage;
+            }
+            else if (Mathf.Abs(currentZPercentage - ZPercentage) &amp;gt; _vibrationInterval)
+            {
+                Vibrate(_vibrationStrenght);
+                currentZPercentage = ZPercentage;
+            }
+
+            yield return null;
+        }
+    }
+
+    public override void StartUsing(GameObject currentUsingObject)
+    {
+        base.StartUsing(currentUsingObject);
+
+        if (OnUseStarted != null)
+            OnUseStarted();
+    }
+
+    public override void StopUsing(GameObject previousUsingObject)
+    {
+        base.StopUsing(previousUsingObject);
+
+        if (OnUseStopped != null)
+            OnUseStopped();
+    }
+
+    public void Vibrate(float vibrationStrength)
+    {
+        if(_controllerActions != null)
+            _controllerActions.TriggerHapticPulse(vibrationStrength);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With those two pieces in place you can now map the joystick movement to anything you see fit. In my case, a simple airplane.
+Let me know what you think about this solution and if you have any doubts about the implementation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Unite Los Angeles 16</title>
       <link>http://www.luispedrofonseca.com/unite-los-angeles-16/</link>
       <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
@@ -540,42 +694,6 @@ public static class EnumsHelperExtension
 &lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-2d-skeletal-animation/jack_run1.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Don&amp;rsquo;t forget to &lt;a href=&#34;https://twitter.com/lpfonseca&#34; target=&#34;_blank&#34;&gt;follow me on Twitter&lt;/a&gt; for updates on this game and more of my ramblings. 😉&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Unity Quick Tips — Global Conditional Attributes</title>
-      <link>http://www.luispedrofonseca.com/unity-quick-tips-global-conditional-attributes/</link>
-      <pubDate>Fri, 18 Jul 2014 17:56:13 +0000</pubDate>
-      
-      <guid>http://www.luispedrofonseca.com/unity-quick-tips-global-conditional-attributes/</guid>
-      <description>&lt;p&gt;A very useful trick you can do on your Unity projects is to setup some global conditional attributes. Let&amp;rsquo;s see how and what for in a very a simple example.&lt;/p&gt;
-
-&lt;p&gt;First go to your &lt;strong&gt;Player Settings&lt;/strong&gt; (Edit &amp;gt; Project Settings &amp;gt; Player) and under the &lt;strong&gt;Other Settings&lt;/strong&gt; tab, type &amp;ldquo;DEBUG&amp;rdquo; on the &lt;strong&gt;Scripting Define Symbols&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-quick-tips-global-conditional-attributes/unity_define_symbols.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can now in your scripts do something like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;[System.Diagnostics.Conditional(&amp;quot;DEBUG&amp;quot;)]
-void DrawRay(Vector2 start, Vector2 dir, Color color, float duration)
-{
-	Debug.DrawRay(start, dir, color, duration);
-}
-
-void SomeMethod()
-{
-	... 
-	DrawRay(rayOrigin, rayDirection, Color.red, 1f);
-	...
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;What the conditional attribute does, in this case, is only executing the &lt;code&gt;DrawRay&lt;/code&gt; method if the &amp;ldquo;DEBUG&amp;rdquo; conditional is defined. But the good news is that the code won&amp;rsquo;t give you any warnings or errors in case it isn&amp;rsquo;t!&lt;/p&gt;
-
-&lt;p&gt;So, no more having to comment out or removing code before making a final build. Just wrap all of your debug code with a similar approach and save yourself some headaches.&lt;/p&gt;
-
-&lt;p&gt;This simple trick can obviously be applied in many other situations and once you get the hang of it I&amp;rsquo;m sure you&amp;rsquo;ll find some very interesting uses for it. Let me know if you have any questions or suggestions for more quick tips!&lt;/p&gt;
 </description>
     </item>
     
