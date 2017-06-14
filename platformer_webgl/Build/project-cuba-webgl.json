@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "project-cuba-webgl.data.unityweb",
+"asmCodeUrl": "project-cuba-webgl.asm.code.unityweb",
+"asmMemoryUrl": "project-cuba-webgl.asm.memory.unityweb",
+"asmFrameworkUrl": "project-cuba-webgl.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
