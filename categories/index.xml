@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Luís Pedro Fonseca</title>
+    <link>http://www.luispedrofonseca.com/categories/</link>
+    <description>Recent content in Categories on Luís Pedro Fonseca</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Luís Pedro Fonseca. All Rights Reserved. Website powered by [Hugo](//gohugo.io).</copyright>
+    
+	<atom:link href="http://www.luispedrofonseca.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Csharp</title>
+      <link>http://www.luispedrofonseca.com/categories/csharp/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/categories/csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plugins</title>
+      <link>http://www.luispedrofonseca.com/categories/plugins/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/categories/plugins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Procamera2d</title>
+      <link>http://www.luispedrofonseca.com/categories/procamera2d/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/categories/procamera2d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project Cuba</title>
+      <link>http://www.luispedrofonseca.com/categories/project-cuba/</link>
+      <pubDate>Fri, 30 Jan 2015 14:42:19 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/categories/project-cuba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uncategorized</title>
+      <link>http://www.luispedrofonseca.com/categories/uncategorized/</link>
+      <pubDate>Sun, 12 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/categories/uncategorized/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unity</title>
+      <link>http://www.luispedrofonseca.com/categories/unity/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/categories/unity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

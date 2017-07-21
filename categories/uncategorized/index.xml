@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Luís Pedro Fonseca</title>
-    <link>http://www.luispedrofonseca.com/categories/uncategorized/index.xml</link>
-    <description>Recent content on Luís Pedro Fonseca</description>
+    <title>Uncategorized on Luís Pedro Fonseca</title>
+    <link>http://www.luispedrofonseca.com/categories/uncategorized/</link>
+    <description>Recent content in Uncategorized on Luís Pedro Fonseca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Luís Pedro Fonseca. All Rights Reserved. Website powered by [Hugo](//gohugo.io).</copyright>
-    <atom:link href="http://www.luispedrofonseca.com/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.luispedrofonseca.com/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>New site engine — Hugo</title>
@@ -15,27 +18,8 @@
       <pubDate>Sun, 12 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/new-site-engine-hugo/</guid>
-      <description>&lt;p&gt;Ever since I started with this blog/website, publishing a new post, updating some information or even tweaking its layout, has always been a chore.&lt;/p&gt;
-
-&lt;p&gt;This website was made with Wordpress because that&amp;rsquo;s pretty much the standard when you&amp;rsquo;re planning to start a blog. Your host provider gives you a very convenient one-click install solution and you can be up and running in a matter of minutes. There are an infinite number of plugins for every possible use-case you can think of and even more themes to customize its look.&lt;/p&gt;
-
-&lt;p&gt;However, this comes with a cost. The more plugins you add, or the more complex your theme gets, the slower you site will be. These issues are probably easy to fix with some more advanced Wordpress knowledge. But, I wanted to simplify and get rid of all the garbage that was making my website sluggish and a pain to update.&lt;/p&gt;
-
-&lt;p&gt;After some research, I found &lt;a href=&#34;http://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;. It had everything I needed:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Easy installation and setup&lt;/li&gt;
-&lt;li&gt;Blazing-fast speed&lt;/li&gt;
-&lt;li&gt;Support for content written in Markdown&lt;/li&gt;
-&lt;li&gt;Syntax highlighting for code snippets&lt;/li&gt;
-&lt;li&gt;Customizable themes&lt;/li&gt;
-&lt;li&gt;Anywhere hosting (I&amp;rsquo;m using GitHub Pages)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The site you&amp;rsquo;re seeing now is made with it and I think it paid off. It feels immensely faster and this post was created simply by pushing a file into the repository. 👍&lt;/p&gt;
-
-&lt;p&gt;Hugo is probably not suited for designers or non-technical people, as the process involves some scripting knowledge. But for programmers like me, who don&amp;rsquo;t like to mess with web frontend technologies (HTML/CSS/JS) but still like to control what they&amp;rsquo;re dealing with, it&amp;rsquo;s a dream come true.&lt;/p&gt;
-</description>
+      <description>Ever since I started with this blog/website, publishing a new post, updating some information or even tweaking its layout, has always been a chore.
+This website was made with Wordpress because that&amp;rsquo;s pretty much the standard when you&amp;rsquo;re planning to start a blog. Your host provider gives you a very convenient one-click install solution and you can be up and running in a matter of minutes. There are an infinite number of plugins for every possible use-case you can think of and even more themes to customize its look.</description>
     </item>
     
     <item>
@@ -44,38 +28,8 @@
       <pubDate>Sat, 30 Aug 2014 02:04:28 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/thank-you-adobe/</guid>
-      <description>
-
-&lt;p&gt;We&amp;rsquo;ve had a great journey together but it&amp;rsquo;s time to say goodbye!&amp;hellip; Although&amp;hellip; It&amp;rsquo;s your fault and let me explain why&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Ever since I&amp;rsquo;ve started working professionally on the creative industry more than 10 years ago, Adobe software has been the standard by which every designer measured their software skills. For the most part this still holds true nowadays, but the tides are changing rapidly it and will probably be too overwhelming for Adobe to handle.&lt;/p&gt;
-
-&lt;h2 id=&#34;nimbleness&#34;&gt;Nimbleness&lt;/h2&gt;
-
-&lt;p&gt;Most Adobe products are now authentic dinosaurs (measured in tech-years). The &lt;a href=&#34;http://en.wikipedia.org/wiki/Adobe_Photoshop_version_history&#34; target=&#34;_blank&#34;&gt;first commercial release of Photoshop was in March, 1989&lt;/a&gt;! This effectively makes it one of the oldest softwares still being actively used! While age in most cases means experience, in the software world also means a big baggage of legacy code, which in turn, usually results in a pile of outdated features and bugs.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s face it, Adobe can&amp;rsquo;t simply redesign Photoshop (or any of their other major products) from the ground-up and hope that their several million users love the new version. We all know how people react to change, and everybody saw what happened when Adobe replaced FreeHand with Illustrator — there are still people today swearing FreeHand is/was better than Illustrator!&lt;/p&gt;
-
-&lt;p&gt;This lack of innovation that Adobe is tied to, is exactly what the other software companies have to their favour. They can afford to bring new, bold and exciting features pretty much on every release. Since the typical users of these softwares are more likely to embrace change, it&amp;rsquo;s a win-win situation.&lt;/p&gt;
-
-&lt;h2 id=&#34;price&#34;&gt;Price&lt;/h2&gt;
-
-&lt;p&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;a href=&#34;https://twitter.com/lpfonseca/status/502766044323520512&#34; target=&#34;_blank&#34;&gt;I&lt;/a&gt;&lt;/span&gt;  &lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=78yigV0GYGQ&#34; target=&#34;_blank&#34;&gt;won&amp;rsquo;t&lt;/a&gt;&lt;/span&gt;  &lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;a href=&#34;https://forums.adobe.com/message/4404665&#34; target=&#34;_blank&#34;&gt;even&lt;/a&gt;&lt;/span&gt; talk about the prices Adobe practices outside United States, but their change to a subscription based service surely doesn&amp;rsquo;t fit everyone as &lt;a href=&#34;http://www.fastcodesign.com/1672530/adobe-5-reasons-we-killed-the-creative-suite&#34; target=&#34;_blank&#34;&gt;they seem to think&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Basically, for $600 you get all their products for one year, after that you have to keep paying the monthly fee or you lose all the access to their software. &lt;a href=&#34;https://creative.adobe.com/plans&#34; target=&#34;_blank&#34;&gt;There are other plans&lt;/a&gt; too, but in all honesty they are ridiculous, especially if you just intend to use 2 or 3 of their products.&lt;/p&gt;
-
-&lt;p&gt;While I can understand how this works best for Adobe, for a lot of users it doesn&amp;rsquo;t. When for $55 you can buy both &lt;a href=&#34;https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12&amp;ign-mpt=uo%3D4&#34; target=&#34;_blank&#34;&gt;Pixelmator&lt;/a&gt; and &lt;a href=&#34;https://itunes.apple.com/us/app/idraw/id404705039?mt=12&amp;ign-mpt=uo%3D4&#34; target=&#34;_blank&#34;&gt;iDraw&lt;/a&gt;, and effectively own them for the &lt;strong&gt;rest of your life&lt;/strong&gt;, it makes it REALLY hard to justify the $480 Adobe charges for &lt;strong&gt;one year&lt;/strong&gt; of Photoshop and Illustrator.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-now&#34;&gt;What now?&lt;/h2&gt;
-
-&lt;p&gt;As you&amp;rsquo;ve probably guessed by now, my Adobe subscription ended a couple of weeks ago and yes, I&amp;rsquo;m not renewing it. After several trials and tests I&amp;rsquo;ve found incredibly powerful and capable replacements for the two Adobe products I used the most.&lt;/p&gt;
-
-&lt;p&gt;Now, I&amp;rsquo;m not saying that everyone should do the same or even that these alternatives fit everyone and every need. However, in my specific case, and I think in many others too, they perfectly cover all my use cases, with a lot of room to grow, while at the same time saving me quite a few bucks.&lt;/p&gt;
-
-&lt;p&gt;While I&amp;rsquo;m not a professional artist or designer, &lt;a href=&#34;http://www.luispedrofonseca.com/about/&#34;&gt;my skills lie elsewhere&lt;/a&gt;, doing my &lt;a href=&#34;http://www.luispedrofonseca.com/project-cuba/&#34;&gt;personal projects&lt;/a&gt; as an one-man team, forces me to constantly re-evaluate my methodology. Since I believe Adobe &lt;a href=&#34;http://www.smashingmagazine.com/2013/04/22/repurposing-photoshop/&#34; target=&#34;_blank&#34;&gt;no longer gives a competitive edge&lt;/a&gt;, we&amp;rsquo;re going our separate ways.&lt;/p&gt;
-
-&lt;p&gt;Would love to hear your opinion on this subject so feel free to comment here or &lt;a href=&#34;https://twitter.com/lpfonseca&#34; target=&#34;_blank&#34;&gt;follow me on Twitter&lt;/a&gt; for further discussion!&lt;/p&gt;
-</description>
+      <description>We&amp;rsquo;ve had a great journey together but it&amp;rsquo;s time to say goodbye!&amp;hellip; Although&amp;hellip; It&amp;rsquo;s your fault and let me explain why&amp;hellip;
+Ever since I&amp;rsquo;ve started working professionally on the creative industry more than 10 years ago, Adobe software has been the standard by which every designer measured their software skills. For the most part this still holds true nowadays, but the tides are changing rapidly it and will probably be too overwhelming for Adobe to handle.</description>
     </item>
     
     <item>
@@ -84,18 +38,9 @@
       <pubDate>Tue, 01 Jul 2014 00:00:26 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/restart30/</guid>
-      <description>&lt;p&gt;Hi again!&lt;/p&gt;
-
-&lt;p&gt;As you&amp;rsquo;ve probably figured out by now, my name is Luís Pedro Fonseca and I&amp;rsquo;m a game developer. You can learn more about me &lt;a href=&#34;http://www.luispedrofonseca.com/about&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is my third introductory blog post (I&amp;rsquo;ve had two other blogs in the past who died horribly from abandonment) and strangely enough it doesn&amp;rsquo;t get easier. I hope to not make the same mistakes with this blog as I did before and I&amp;rsquo;m counting on you to help me out keeping this blog up and running. &lt;a href=&#34;http://www.twitter.com/lpfonseca&#34; target=&#34;_blank&#34;&gt;Twitter following&lt;/a&gt; is greatly appreciated too!&lt;/p&gt;
-
-&lt;p&gt;The reason for me to come back to blogging is that starting today I&amp;rsquo;ll be dedicating a lot more time to my own games and projects. &lt;a href=&#34;http://www.x-team.com&#34; target=&#34;_blank&#34;&gt;The superheroes company I&amp;rsquo;ve been working for&lt;/a&gt; the last 6 years, and to whom I&amp;rsquo;m infinitely grateful, has &lt;a href=&#34;http://x-team.com/2014/06/a-new-chapter-a-new-ceo/&#34; target=&#34;_blank&#34;&gt;a new CEO&lt;/a&gt;, as of today, and this turned out to be a great opportunity for me to take a step I&amp;rsquo;ve considered for a while.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve moved to a freelancer position which means I now have the option to choose what projects I work on, but more importantly, I&amp;rsquo;m able to dedicate more time and effort to my own games and projects. This blog will be a central piece of that effort with regular posts about my progress, as well as various bits and pieces about game development and other tech subjects.&lt;/p&gt;
-
-&lt;p&gt;Stay tuned! 😉&lt;/p&gt;
-</description>
+      <description>Hi again!
+As you&amp;rsquo;ve probably figured out by now, my name is Luís Pedro Fonseca and I&amp;rsquo;m a game developer. You can learn more about me here.
+This is my third introductory blog post (I&amp;rsquo;ve had two other blogs in the past who died horribly from abandonment) and strangely enough it doesn&amp;rsquo;t get easier. I hope to not make the same mistakes with this blog as I did before and I&amp;rsquo;m counting on you to help me out keeping this blog up and running.</description>
     </item>
     
   </channel>

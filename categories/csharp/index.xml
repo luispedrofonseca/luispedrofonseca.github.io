@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Luís Pedro Fonseca</title>
-    <link>http://www.luispedrofonseca.com/categories/csharp/index.xml</link>
-    <description>Recent content on Luís Pedro Fonseca</description>
+    <title>Csharp on Luís Pedro Fonseca</title>
+    <link>http://www.luispedrofonseca.com/categories/csharp/</link>
+    <description>Recent content in Csharp on Luís Pedro Fonseca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Luís Pedro Fonseca. All Rights Reserved. Website powered by [Hugo](//gohugo.io).</copyright>
-    <atom:link href="http://www.luispedrofonseca.com/categories/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.luispedrofonseca.com/categories/csharp/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Unity VR Joystick</title>
@@ -15,152 +18,7 @@
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/unity-vr-joystick/</guid>
-      <description>&lt;p&gt;For the past year, I have become more and more interested in virtual reality, especially after trying out a bunch of demos at the last Unite in LA. So much, in fact, that I have decided to go ahead and buy an &lt;a href=&#34;http://www.vive.com&#34; target=&#34;_blank&#34;&gt;HTC Vive&lt;/a&gt;. Being a new technology, it is still quite expensive, not only because of the price of the device itself but also because you need to have a pretty beefy PC to support it. I have put together a &lt;a href=&#34;https://www.tonymacx86.com&#34; target=&#34;_blank&#34;&gt;Hackintosh&lt;/a&gt; (maybe more about that in a future post), so I can still use OSX for my daily job but also run Windows which is a requirement for desktop VR.&lt;/p&gt;
-
-&lt;p&gt;To put the Vive to good use I have decided to create a simple flying game. The first challenge I faced was figuring out how to control a plane using only the Vive controllers. The solution that made most sense to me was to recreate an airplane joystick (aka HOTAS), inside the game itself and then let the player grab it and move it using their own hands like in real life.&lt;/p&gt;
-
-&lt;p&gt;This is how it looks:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-vr-joystick/unity-vr-joystick.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;To speed up the development, I have been using the amazing &lt;a href=&#34;https://github.com/thestonefox/VRTK&#34; target=&#34;_blank&#34;&gt;VRTK library&lt;/a&gt; which is a collection of useful scripts and concepts to aid building VR solutions rapidly. It handles stuff like locomotion, interactions, physics, UI, etc. If you are planning to develop in VR using Unity, trust me, you will want to use this library. Best of all, it is free and open-source!&lt;/p&gt;
-
-&lt;p&gt;Using VRTK made things really simple and all I had to do was create a configurable joint between the stick and the base. Here are the settings I used:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-vr-joystick/unity-vr-joystick-configurable-joint.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After creating the configurable joint, you will need to create a new class that overrides the VRTK_InteractableObject class (from the VRTK library I mentioned earlier). This class provides everything you need to know about when the player grabbed, dropped or moved the joystick. With this in place, you now have all the data needed to maneuver the plane, including the roll and pitch (mapped to XPercentage and ZPercentage here):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;using System;
-using System.Collections;
-using UnityEngine;
-using VRTK;
-
-public class VRJoystick : VRTK_InteractableObject
-{
-    public Action OnUseStarted;
-    public Action OnUseStopped;
-
-    [Header(&amp;quot;Joystick&amp;quot;)]
-    [SerializeField]
-    Transform _handle;
-
-    [SerializeField]
-    float _maxXAngle = 45;
-
-    [SerializeField]
-    float _maxZAngle = 45;
-
-    [SerializeField]
-    [Range(0, 1)]
-    float _vibrationStrenght = .1f;
-
-    [SerializeField]
-    [Range(0, 1)]
-    float _vibrationInterval = .05f;
-
-    public float XPercentage;
-    public float ZPercentage;
-
-    VRTK_ControllerActions _controllerActions;
-
-    bool _grabbing;
-    
-    override protected void Update ()
-    {
-        base.Update();
-
-        var angleX = _handle.localRotation.eulerAngles.x;
-        if (angleX &amp;gt; 180)
-            angleX -= 360;
-
-        var angleZ = _handle.localRotation.eulerAngles.z;
-        if (angleZ &amp;gt; 180)
-            angleZ -= 360;
-
-        XPercentage = angleX / _maxXAngle;
-        ZPercentage = angleZ / _maxZAngle;
-    }
-
-    public override void StartTouching(GameObject currentTouchingObject)
-    {
-        base.StartTouching(currentTouchingObject);
-        _controllerActions = currentTouchingObject.GetComponent&amp;lt;VRTK_ControllerActions&amp;gt;();
-        Vibrate(.5f);
-    }
-
-    public override void StopTouching(GameObject previousTouchingObject)
-    {
-        base.StopTouching(previousTouchingObject);
-        _controllerActions = previousTouchingObject.GetComponent&amp;lt;VRTK_ControllerActions&amp;gt;();
-        Vibrate(.5f);
-    }
-    
-    override public void Grabbed(GameObject grabbingObject)
-    {
-        base.Grabbed(grabbingObject);
-        _controllerActions = grabbingObject.GetComponent&amp;lt;VRTK_ControllerActions&amp;gt;();
-        Vibrate(.5f);
-        _grabbing = true;
-
-        StartCoroutine(DetectJoystickMovement());
-    }
-
-    override public void Ungrabbed(GameObject previousGrabbingObject)
-    {
-        base.Ungrabbed(previousGrabbingObject);
-
-        _grabbing = false;
-    }
-
-    IEnumerator DetectJoystickMovement()
-    {
-        var currentXPercentage = XPercentage;
-        var currentZPercentage = ZPercentage;
-        while (_grabbing)
-        {
-            if(Mathf.Abs(currentXPercentage - XPercentage) &amp;gt; _vibrationInterval)
-            {
-                Vibrate(_vibrationStrenght);
-                currentXPercentage = XPercentage;
-            }
-            else if (Mathf.Abs(currentZPercentage - ZPercentage) &amp;gt; _vibrationInterval)
-            {
-                Vibrate(_vibrationStrenght);
-                currentZPercentage = ZPercentage;
-            }
-
-            yield return null;
-        }
-    }
-
-    public override void StartUsing(GameObject currentUsingObject)
-    {
-        base.StartUsing(currentUsingObject);
-
-        if (OnUseStarted != null)
-            OnUseStarted();
-    }
-
-    public override void StopUsing(GameObject previousUsingObject)
-    {
-        base.StopUsing(previousUsingObject);
-
-        if (OnUseStopped != null)
-            OnUseStopped();
-    }
-
-    public void Vibrate(float vibrationStrength)
-    {
-        if(_controllerActions != null)
-            _controllerActions.TriggerHapticPulse(vibrationStrength);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;With those two pieces in place you can now map the joystick movement to anything you see fit. In my case, a simple airplane.
-Let me know what you think about this solution and if you have any doubts about the implementation.&lt;/p&gt;
-</description>
+      <description>For the past year, I have become more and more interested in virtual reality, especially after trying out a bunch of demos at the last Unite in LA. So much, in fact, that I have decided to go ahead and buy an HTC Vive. Being a new technology, it is still quite expensive, not only because of the price of the device itself but also because you need to have a pretty beefy PC to support it.</description>
     </item>
     
     <item>
@@ -169,14 +27,8 @@ Let me know what you think about this solution and if you have any doubts about 
       <pubDate>Fri, 23 Oct 2015 11:34:16 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/learning-unity-ios-game-development-technical-review/</guid>
-      <description>&lt;p&gt;Yesterday I got in my mailbox &lt;a href=&#34;https://www.packtpub.com/game-development/learning-unity-ios-game-development&#34; target=&#34;_blank&#34;&gt;a book I technically reviewed&lt;/a&gt; for Packt. It&amp;rsquo;s a great feeling having a book with your name on it, even if not on the front page. 😀&lt;/p&gt;
-
-&lt;p&gt;As you&amp;rsquo;ve probably guessed, it&amp;rsquo;s about Unity and iOS publishing. Although you won&amp;rsquo;t find anything particularly new in there, it&amp;rsquo;s a nice package, has a few good examples and shouldn&amp;rsquo;t disappoint you. It&amp;rsquo;s a good gift for that game dev friend of yours who is just getting started. However, if you know your way around Unity and iOS, don&amp;rsquo;t expect to learn much from it.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/learning-unity-ios-game-development-technical-review/learning_unity_ios_reviewers.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It was my first time working with a book publisher and the process was really smooth. Packt are very fast and you can tell their workflow is super optimised. I received all the chapters for reviewal on the scheduled dates and even the release date was right on what they predicted several months earlier. Coming from a gaming background where projects are so often under-estimated I really value when a release date for another project is so accurate.&lt;/p&gt;
-</description>
+      <description>Yesterday I got in my mailbox a book I technically reviewed for Packt. It&amp;rsquo;s a great feeling having a book with your name on it, even if not on the front page. 😀
+As you&amp;rsquo;ve probably guessed, it&amp;rsquo;s about Unity and iOS publishing. Although you won&amp;rsquo;t find anything particularly new in there, it&amp;rsquo;s a nice package, has a few good examples and shouldn&amp;rsquo;t disappoint you. It&amp;rsquo;s a good gift for that game dev friend of yours who is just getting started.</description>
     </item>
     
     <item>
@@ -185,26 +37,7 @@ Let me know what you think about this solution and if you have any doubts about 
       <pubDate>Fri, 22 Aug 2014 18:12:54 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/script-inspector-3-beta-quick-review/</guid>
-      <description>&lt;p&gt;If you&amp;rsquo;re working with Unity on a Mac you are unfortunately stuck to the ugly, outdated and painfully sluggish, MonoDevelop. There are some alternatives like using &lt;a href=&#34;http://wiki.unity3d.com/index.php/Using_Sublime_Text_as_a_script_editor&#34; target=&#34;_blank&#34;&gt;Sublime&lt;/a&gt;, &lt;a href=&#34;http://forum.unity3d.com/threads/c-bundle-for-textmate-version-0-03-released-4-18.1568/&#34; target=&#34;_blank&#34;&gt;TextMate&lt;/a&gt;, or, if you&amp;rsquo;re on feeling adventurous, you can even use Visual Studio (with the amazing &lt;a href=&#34;http://unityvs.com&#34; target=&#34;_blank&#34;&gt;UnityVS&lt;/a&gt;) from a virtual machine. However, none of these options is really convenient since you either have to give up on most benefits of a true IDE or you have to use a resource hog VM.&lt;/p&gt;
-
-&lt;p&gt;Fortunately now there&amp;rsquo;s another option, that while it won&amp;rsquo;t allow you to completely ditch MonoDevelop, it will definitely make you spend less time with it. Let me introduce you to the amazing &lt;a href=&#34;https://www.assetstore.unity3d.com/en/#!/content/3535&#34; target=&#34;_blank&#34;&gt;Script Inspector&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;For the past several weeks I&amp;rsquo;ve been trying out the Beta of the upcoming version 3. It&amp;rsquo;s still not available to the public but &lt;a href=&#34;https://twitter.com/FlipbookGames&#34; target=&#34;_blank&#34;&gt;Flipbookee&lt;/a&gt; was kind enough to let me try out the Beta version and I must say I&amp;rsquo;m &lt;strong&gt;VERY&lt;/strong&gt; impressed!&lt;/p&gt;
-
-&lt;p&gt;The basic concept of &lt;em&gt;Script Inspector&lt;/em&gt; is to allow you to edit your scripts without ever leaving the Unity editor.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/script-inspector-3-beta-quick-review/Script_inspector_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The best part is that on this new version, you now get &lt;strong&gt;full auto-complete, code hinting, snippets, syntax error highlighting &lt;/strong&gt;and much more! You can see what&amp;rsquo;s it all about on the product &lt;a href=&#34;http://forum.unity3d.com/threads/script-inspector-3.195218/&#34; target=&#34;_blank&#34;&gt;forum thread&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now, don&amp;rsquo;t expect this to fully replace your IDE (at least not yet) since some stuff like refactoring, debugging and a few other bits and pieces are still missing. A slight pain point for me is that since the plugin is integrated into Unity you have to rely on some not so standard key shortcuts to bypass the ones from Unity itself.&lt;/p&gt;
-
-&lt;p&gt;However, the truth is that since I&amp;rsquo;ve started using this plugin I have to rely a lot less on jumping into MonoDevelop (and wait several seconds for it to sync) and can I simply edit my scripts instantly. Really convenient!&lt;/p&gt;
-
-&lt;p&gt;While Script Inspector 3 is still not available, it should be pretty soon and if you buy version 2 you&amp;rsquo;ll get the update for free! Do yourself a favour and &lt;a href=&#34;https://www.assetstore.unity3d.com/en/#!/content/3535&#34; target=&#34;_blank&#34;&gt;get it&lt;/a&gt; now!&lt;/p&gt;
-
-&lt;p&gt;Once it&amp;rsquo;s released I&amp;rsquo;ll probably do a more in-depth review, but for now feel free to ask any questions here on the comments section or just &lt;a href=&#34;https://twitter.com/lpfonseca&#34; target=&#34;_blank&#34;&gt;follow me on Twitter&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>If you&amp;rsquo;re working with Unity on a Mac you are unfortunately stuck to the ugly, outdated and painfully sluggish, MonoDevelop. There are some alternatives like using Sublime, TextMate, or, if you&amp;rsquo;re on feeling adventurous, you can even use Visual Studio (with the amazing UnityVS) from a virtual machine. However, none of these options is really convenient since you either have to give up on most benefits of a true IDE or you have to use a resource hog VM.</description>
     </item>
     
     <item>
@@ -213,61 +46,8 @@ Let me know what you think about this solution and if you have any doubts about 
       <pubDate>Fri, 08 Aug 2014 14:16:45 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/unity-quick-tips-enum-description-extension-method/</guid>
-      <description>&lt;p&gt;While this tip is not Unity specific, it&amp;rsquo;s still very useful for all C# Unity devs out there.&lt;/p&gt;
-
-&lt;p&gt;Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and &lt;a href=&#34;http://stackoverflow.com/questions/424366/c-sharp-string-enums&#34; target=&#34;_blank&#34;&gt;there are dozens of different solutions&lt;/a&gt; to accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.&lt;/p&gt;
-
-&lt;p&gt;Extension methods enable you to &amp;ldquo;add&amp;rdquo; methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. That&amp;rsquo;s what we&amp;rsquo;re going to do to the &lt;code&gt;Enum&lt;/code&gt; type to get the results we want.&lt;/p&gt;
-
-&lt;p&gt;Consider the following scenario: You need an enum with the characters in your game:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;public enum CharactersEnum
-{
-	MAINCHARACTER,
-	ENEMY1,
-	ENEMY2,
-	FINALBOSS
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;However at some point, you might want to show the characters names. While &lt;code&gt;FINALBOSS&lt;/code&gt; is a perfectly fine name for a character, sometimes you might feel a little bit more creative. In that case, you could add the &lt;code&gt;Description&lt;/code&gt; parameter to your enum entries, like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;using System.ComponentModel;
-
-public enum CharactersEnum
-{
-	MAINCHARACTER,
-	ENEMY1,
-	ENEMY2,
-	[Description(&amp;quot;Mr. Bad Guy&amp;quot;)]
-	FINALBOSS
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And then, all you have to do is create an extension method for the &lt;code&gt;Enum&lt;/code&gt; type that can grab that description:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;using System;
-using System.ComponentModel;
-
-public static class EnumsHelperExtension
-{
-	public static string ToDescription(this Enum value)
-	{
-		DescriptionAttribute[] da = (DescriptionAttribute[])(value.GetType().GetField(value.ToString())).GetCustomAttributes(typeof(DescriptionAttribute), false);
-		return da.Length &amp;gt; 0 ? da[0].Description : value.ToString();
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Save this class in a file somewhere on your project and from now on you can simply do:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;string charName = CharactersEnum.FinalBoss.ToDescription();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;All your &lt;code&gt;Enum&lt;/code&gt;&amp;rsquo;s can now have a description and in case the they don&amp;rsquo;t, it will simply return the attribute name as a simple &lt;code&gt;ToString()&lt;/code&gt; usually would.&lt;/p&gt;
-
-&lt;p&gt;Please comment or &lt;a href=&#34;https://twitter.com/lpfonseca&#34; target=&#34;_blank&#34;&gt;add me on Twitter&lt;/a&gt;, if you have any questions or suggestions for more quick tips!&lt;/p&gt;
-</description>
+      <description>While this tip is not Unity specific, it&amp;rsquo;s still very useful for all C# Unity devs out there.
+Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutions to accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.</description>
     </item>
     
     <item>
@@ -276,34 +56,10 @@ public static class EnumsHelperExtension
       <pubDate>Fri, 18 Jul 2014 17:56:13 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/unity-quick-tips-global-conditional-attributes/</guid>
-      <description>&lt;p&gt;A very useful trick you can do on your Unity projects is to setup some global conditional attributes. Let&amp;rsquo;s see how and what for in a very a simple example.&lt;/p&gt;
-
-&lt;p&gt;First go to your &lt;strong&gt;Player Settings&lt;/strong&gt; (Edit &amp;gt; Project Settings &amp;gt; Player) and under the &lt;strong&gt;Other Settings&lt;/strong&gt; tab, type &amp;ldquo;DEBUG&amp;rdquo; on the &lt;strong&gt;Scripting Define Symbols&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-quick-tips-global-conditional-attributes/unity_define_symbols.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can now in your scripts do something like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;[System.Diagnostics.Conditional(&amp;quot;DEBUG&amp;quot;)]
-void DrawRay(Vector2 start, Vector2 dir, Color color, float duration)
-{
-	Debug.DrawRay(start, dir, color, duration);
-}
-
-void SomeMethod()
-{
-	... 
-	DrawRay(rayOrigin, rayDirection, Color.red, 1f);
-	...
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;What the conditional attribute does, in this case, is only executing the &lt;code&gt;DrawRay&lt;/code&gt; method if the &amp;ldquo;DEBUG&amp;rdquo; conditional is defined. But the good news is that the code won&amp;rsquo;t give you any warnings or errors in case it isn&amp;rsquo;t!&lt;/p&gt;
-
-&lt;p&gt;So, no more having to comment out or removing code before making a final build. Just wrap all of your debug code with a similar approach and save yourself some headaches.&lt;/p&gt;
-
-&lt;p&gt;This simple trick can obviously be applied in many other situations and once you get the hang of it I&amp;rsquo;m sure you&amp;rsquo;ll find some very interesting uses for it. Let me know if you have any questions or suggestions for more quick tips!&lt;/p&gt;
-</description>
+      <description>A very useful trick you can do on your Unity projects is to setup some global conditional attributes. Let&amp;rsquo;s see how and what for in a very a simple example.
+First go to your Player Settings (Edit &amp;gt; Project Settings &amp;gt; Player) and under the Other Settings tab, type &amp;ldquo;DEBUG&amp;rdquo; on the Scripting Define Symbols.
+You can now in your scripts do something like:
+[System.Diagnostics.Conditional(&amp;quot;DEBUG&amp;quot;)] void DrawRay(Vector2 start, Vector2 dir, Color color, float duration) { Debug.</description>
     </item>
     
     <item>
@@ -312,22 +68,8 @@ void SomeMethod()
       <pubDate>Fri, 11 Jul 2014 22:39:58 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/unity-quick-tips-cache-server/</guid>
-      <description>&lt;p&gt;After many years working with Unity, I&amp;rsquo;ve realised that one of the most overlooked features of the Unity&amp;rsquo;s Team License, by myself and other fellow developers, is the &lt;a href=&#34;http://docs.unity3d.com/Manual/CacheServer.html&#34; target=&#34;_blank&#34;&gt;Cache Server&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Like the name says, what it basically does is caching your assets in order to make them load faster. This is particularly great if you&amp;rsquo;re working on a multi-platform game where you need to switch platforms constantly. As you all know, every time you do that Unity has to reimport all the assets, which can be a pretty painful depending on the size and number of resources on your project.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-quick-tips-cache-server/unity_importing.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, what most people don&amp;rsquo;t realize is that by using the Cache Server you can reduce that time to a couple of seconds and switch platforms pretty much instantaneously!&lt;/p&gt;
-
-&lt;p&gt;If you have a medium to large team working on the same office it makes sense to have the Cache Server setup on a local machine connected to your, preferably wired, network. However — and this is where my tip comes in — if you&amp;rsquo;re a lone wolf, work on a remote team, or just don&amp;rsquo;t have the time/money to spend on a dedicated Cache Server machine, you can (and should) install it locally!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.luispedrofonseca.com/images/unity-quick-tips-cache-server/unity_cache_server_localhost.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Just follow this &lt;a href=&#34;http://docs.unity3d.com/Manual/CacheServer.html&#34; target=&#34;_blank&#34;&gt;setup tutorial&lt;/a&gt; but instead, use localhost as the IP address and you&amp;rsquo;re done! At the (relatively) small expense of RAM and disk space you get instant platform switch!&lt;/p&gt;
-
-&lt;p&gt;Hope you liked this tip and stay tuned for more!&lt;/p&gt;
-</description>
+      <description>After many years working with Unity, I&amp;rsquo;ve realised that one of the most overlooked features of the Unity&amp;rsquo;s Team License, by myself and other fellow developers, is the Cache Server.
+Like the name says, what it basically does is caching your assets in order to make them load faster. This is particularly great if you&amp;rsquo;re working on a multi-platform game where you need to switch platforms constantly. As you all know, every time you do that Unity has to reimport all the assets, which can be a pretty painful depending on the size and number of resources on your project.</description>
     </item>
     
   </channel>
