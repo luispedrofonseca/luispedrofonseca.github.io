@@ -1,1 +1,5 @@
 User-agent: *
+Disallow: /some-path/
+
+
+Disallow: /portfolio/
