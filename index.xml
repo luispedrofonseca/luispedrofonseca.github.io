@@ -6,7 +6,6 @@
     <description>Recent content on Luís Pedro Fonseca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Luís Pedro Fonseca. All Rights Reserved. Website powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.luispedrofonseca.com/index.xml" rel="self" type="application/rss+xml" />
@@ -263,7 +262,7 @@ This is my third introductory blog post (I&amp;rsquo;ve had two other blogs in t
       
       <guid>http://www.luispedrofonseca.com/about/</guid>
       <description>Hi there! I&amp;rsquo;m an interactive developer from Porto, Portugal, with over a decade of experience on a multitude of technologies ranging from Flash to Objective-C, with a strong focus on Unity and gaming over the last several years. Certified SCRUM master with an expired certificate.
-I&amp;rsquo;ve worked on a very wide range of projects for high-profiles companies such as FOX Broadcasting, Microsoft, RIOT Games, EMC and many others. Recently I&amp;rsquo;ve decided to start creating my own games and plugins and I&amp;rsquo;ll try to share as much as possible here.</description>
+I&amp;rsquo;ve worked on a very wide range of projects for high-profiles companies such as FOX Broadcasting, Microsoft, RIOT Games, Dell, Dreamworks and many others. Recently I&amp;rsquo;ve decided to start creating my own games and plugins and I&amp;rsquo;ll try to share as much as possible here.</description>
     </item>
     
     <item>
@@ -285,12 +284,12 @@ I&amp;rsquo;ve worked on a very wide range of projects for high-profiles comp
       <description>This is a collection of a few of my best projects for the past several years.
 Some of these projects were done through agencies and not directly with the final client.
 Some projects are under NDA so please don&amp;rsquo;t share this page publicly.
-FOX.com Widgets Client: Fox Broadcasting Company
-Release Date: N/A
-Duration: July 2008 - June 2013
-Role: Flash Developer
-Technology: Flash AS3, Javascript
-Description: A collection of photo galleries, video players and other various widgets that enhanced the FOX.</description>
+The Great Xscape VR Client: Dell Inc.
+Release Date: October 2017
+Duration: 6 months
+Role: Lead Developer
+Technology: Unity, SteamVR, HTC Vive, UNet
+Description: An escape room (in space) designed to introduce the players to Dell EMC products while at the same time having fun in a VR experience.</description>
     </item>
     
     <item>
