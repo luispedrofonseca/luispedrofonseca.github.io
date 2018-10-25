@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile on Luís Pedro Fonseca</title>
+    <link>http://www.luispedrofonseca.com/categories/mobile/</link>
+    <description>Recent content in Mobile on Luís Pedro Fonseca</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.luispedrofonseca.com/categories/mobile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Unity - Supporting Multiple Aspect Ratios</title>
+      <link>http://www.luispedrofonseca.com/unity-supporting-multiple-aspect-ratios/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/unity-supporting-multiple-aspect-ratios/</guid>
+      <description>One of the biggest doubts people have when creating mobile games is how to handle the myriad of screen resolutions and aspect ratios. Just on iOS there are currently 4 different aspect ratios: 4:3, 3:2, 16:9 and 19.5:9. On Android, given the thousands of different devices, it ranges anywhere between those. Here&amp;rsquo;s how those aspect ratios compare to each other (in portrait mode):
+So what&amp;rsquo;s the solution to make your game look great on these screens while avoiding black bars or stretching?</description>
+    </item>
+    
+  </channel>
+</rss>

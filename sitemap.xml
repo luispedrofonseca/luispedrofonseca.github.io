@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.luispedrofonseca.com/unity-supporting-multiple-aspect-ratios/</loc>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.luispedrofonseca.com/unity-vr-joystick/</loc>
     <lastmod>2017-02-02T00:00:00+00:00</lastmod>
   </url>
@@ -137,13 +142,19 @@
   
   <url>
     <loc>http://www.luispedrofonseca.com/categories/csharp/</loc>
-    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.luispedrofonseca.com/</loc>
-    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.luispedrofonseca.com/categories/mobile/</loc>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -159,7 +170,7 @@
   
   <url>
     <loc>http://www.luispedrofonseca.com/post/</loc>
-    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -192,7 +203,7 @@
   
   <url>
     <loc>http://www.luispedrofonseca.com/categories/unity/</loc>
-    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

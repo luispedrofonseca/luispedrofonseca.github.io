@@ -6,10 +6,20 @@
     <description>Recent content on Luís Pedro Fonseca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.luispedrofonseca.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Unity - Supporting Multiple Aspect Ratios</title>
+      <link>http://www.luispedrofonseca.com/unity-supporting-multiple-aspect-ratios/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.luispedrofonseca.com/unity-supporting-multiple-aspect-ratios/</guid>
+      <description>One of the biggest doubts people have when creating mobile games is how to handle the myriad of screen resolutions and aspect ratios. Just on iOS there are currently 4 different aspect ratios: 4:3, 3:2, 16:9 and 19.5:9. On Android, given the thousands of different devices, it ranges anywhere between those. Here&amp;rsquo;s how those aspect ratios compare to each other (in portrait mode):
+So what&amp;rsquo;s the solution to make your game look great on these screens while avoiding black bars or stretching?</description>
+    </item>
     
     <item>
       <title>Unity VR Joystick</title>
@@ -283,12 +293,12 @@ I&amp;rsquo;ve worked on a very wide range of projects for high-profiles comp
       <guid>http://www.luispedrofonseca.com/portfolio/</guid>
       <description>This is a collection of a few of my best projects for the past several years.
 Some projects are still under NDA so please don&amp;rsquo;t share this page publicly.
-Dell The Great Xscape VR Client: Dell Inc.
-Release Date: June 2018
-Duration: 6 months
+Dell The Great Xscape VR Multiplayer Client: Dell Inc.
+Release Date: September 2018
+Duration: 3 months
 Role: Lead Developer
-Technology: Unity, SteamVR, HTC Vive, UNet
-Description: An escape room (in space) designed to introduce the players to Dell EMC products while at the same time having fun in a VR experience.</description>
+Technology: Unity, SteamVR, UNet
+Description: This project was a continuation of the previous one where the challenge was reimagine the entire game for a co-op experience.</description>
     </item>
     
     <item>
