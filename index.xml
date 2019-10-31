@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Luís Pedro Fonseca</title>
@@ -271,7 +271,7 @@ This is my third introductory blog post (I&amp;rsquo;ve had two other blogs in t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/about/</guid>
-      <description>Hi there! I&amp;rsquo;m an interactive developer from Porto, Portugal, with over a decade of experience on a multitude of technologies ranging from Flash to Objective-C, with a strong focus on Unity and gaming over the last several years. Certified SCRUM master with an expired certificate.
+      <description>Hi there! I&amp;rsquo;m an interactive developer from Porto, Portugal, with over a decade of experience on a multitude of technologies ranging from Flash to Objective-C, with a strong focus on Unity and gaming over the last several years. Certified Unity Developer and Certified SCRUM master.
 I&amp;rsquo;ve worked on a very wide range of projects for high-profiles companies such as FOX Broadcasting, Microsoft, RIOT Games, Dell, Dreamworks and many others. Recently I&amp;rsquo;ve decided to start creating my own games and plugins and I&amp;rsquo;ll try to share as much as possible here.</description>
     </item>
     
@@ -293,12 +293,12 @@ I&amp;rsquo;ve worked on a very wide range of projects for high-profiles comp
       <guid>http://www.luispedrofonseca.com/portfolio/</guid>
       <description>This is a collection of a few of my best projects for the past several years.
 Some projects are still under NDA so please don&amp;rsquo;t share this page publicly.
-Dell The Great Xscape VR Multiplayer Client: Dell Inc.
-Release Date: September 2018
-Duration: 3 months
-Role: Lead Developer
-Technology: Unity, SteamVR, UNet
-Description: This project was a continuation of the previous one where the challenge was reimagine the entire game for a co-op experience.</description>
+La Trobe Future City R&amp;amp;D Client: La Trobe University, Melbourne
+Release Date: N/A
+Duration: 6 months
+Role: Lead Programmer
+Tech stack: Unity, ARKit, ARCore, ARFoundation, WebXR
+Description: La Trobe University in Melbourne is currently building a gigantic new campus, which they call Future City.</description>
     </item>
     
     <item>
