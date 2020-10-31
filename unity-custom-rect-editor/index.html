@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>Unity Custom Rect Editor &middot; Luís Pedro Fonseca</title>
-    <meta name="generator" content="Hugo 0.59.0" />
+    <meta name="generator" content="Hugo 0.77.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Luís Pedro Fonseca">
@@ -19,7 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="Unity Custom Rect Editor" />
-<meta property="og:description" content="One of the main goals of ProCamera2D&rsquo;s new extension - Rooms - was to make it as user-friendly as possible.
+<meta property="og:description" content="One of the main goals of ProCamera2D&rsquo;s new extension - Rooms- was to make it as user-friendly as possible.
 Each room is basically a rectangle with some extra data to allow custom transitions. To make it easy to edit the rooms the user should be able to interact with them on the scene. However, Unity does not have a built-in rectangle (Rect) editor tool.
 Gladly, Unity is very flexible and easy to extend, so I created a simple one." />
 <meta property="og:type" content="article" />
@@ -29,14 +29,12 @@ Gladly, Unity is very flexible and easy to extend, so I created a simple one." /
 
     
     <meta itemprop="name" content="Unity Custom Rect Editor">
-<meta itemprop="description" content="One of the main goals of ProCamera2D&rsquo;s new extension - Rooms - was to make it as user-friendly as possible.
+<meta itemprop="description" content="One of the main goals of ProCamera2D&rsquo;s new extension - Rooms- was to make it as user-friendly as possible.
 Each room is basically a rectangle with some extra data to allow custom transitions. To make it easy to edit the rooms the user should be able to interact with them on the scene. However, Unity does not have a built-in rectangle (Rect) editor tool.
 Gladly, Unity is very flexible and easy to extend, so I created a simple one.">
-
-
-<meta itemprop="datePublished" content="2016-10-08T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2016-10-08T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="174">
+<meta itemprop="datePublished" content="2016-10-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-10-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="173">
 
 
 
@@ -44,7 +42,7 @@ Gladly, Unity is very flexible and easy to extend, so I created a simple one.">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity Custom Rect Editor"/>
-<meta name="twitter:description" content="One of the main goals of ProCamera2D&rsquo;s new extension - Rooms - was to make it as user-friendly as possible.
+<meta name="twitter:description" content="One of the main goals of ProCamera2D&rsquo;s new extension - Rooms- was to make it as user-friendly as possible.
 Each room is basically a rectangle with some extra data to allow custom transitions. To make it easy to edit the rooms the user should be able to interact with them on the scene. However, Unity does not have a built-in rectangle (Rect) editor tool.
 Gladly, Unity is very flexible and easy to extend, so I created a simple one."/>
 <meta name="twitter:site" content="@lpfonseca"/>
@@ -152,7 +150,7 @@ Gladly, Unity is very flexible and easy to extend, so I created a simple one."/>
     <div class="base-info profile-block">
       <img id="avatar" src="http://www.luispedrofonseca.com/avatar.png">
       <h2 id="name">Luís Pedro Fonseca</h2>
-      <h3 id="title">Game Developer<br>Part-time indie<br><a href="http://www.procamera2d.com">ProCamera2D</a> plugin author</h3>
+      <h3 id="title">Game Developer<!-- raw HTML omitted -->Part-time indie<!-- raw HTML omitted --><a href="http://www.procamera2d.com">ProCamera2D</a> plugin author</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Porto, Portugal</span>
       
     </div>
@@ -271,18 +269,13 @@ Gladly, Unity is very flexible and easy to extend, so I created a simple one."/>
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>One of the main goals of <a href="http://www.procamera2d.com/user-guide/rooms" target="_blank">ProCamera2D</a>&rsquo;s new extension - <a href="http://www.procamera2d.com/user-guide/extension-rooms/" target="_blank">Rooms</a> - was to make it as user-friendly as possible.</p>
-
+                <p>One of the main goals of <!-- raw HTML omitted -->ProCamera2D<!-- raw HTML omitted -->&rsquo;s new extension - <!-- raw HTML omitted -->Rooms<!-- raw HTML omitted --> - was to make it as user-friendly as possible.</p>
 <p>Each room is basically a rectangle with some extra data to allow custom transitions. To make it easy to edit the rooms the user should be able to interact with them on the scene. However, Unity does not have a built-in rectangle (Rect) editor tool.</p>
-
 <p>Gladly, Unity is very flexible and easy to extend, so I created a simple one. Here you go:</p>
-
 <script type="application/javascript" src="https://gist.github.com/luispedrofonseca/c81c26f6a30108893387292965d524b2.js"></script>
 
-
 <p>And then, to use it, all you have to do in your custom editor is something like:</p>
-
-<pre><code class="language-c">using UnityEngine;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">using UnityEngine;
 using System.Collections;
 using UnityEditor;
 
@@ -294,31 +287,25 @@ public class RectExample : MonoBehaviour
 [CustomEditor(typeof(RectExample))]
 public class RectExampleEditor : Editor
 {
-    void OnSceneGUI()
+    <span style="color:#66d9ef">void</span> OnSceneGUI()
     {
-        var rectExample = (RectExample)target;
+        var rectExample <span style="color:#f92672">=</span> (RectExample)target;
 
-        var rect = RectUtils.ResizeRect(
+        var rect <span style="color:#f92672">=</span> RectUtils.ResizeRect(
             rectExample.MyRect,
             Handles.CubeCap,
             Color.green,
             Color.yellow,
-            HandleUtility.GetHandleSize(Vector3.zero) * .1f,
-            .1f);
+            HandleUtility.GetHandleSize(Vector3.zero) <span style="color:#f92672">*</span> <span style="color:#ae81ff">.1f</span>,
+            <span style="color:#ae81ff">.1f</span>);
 
-        rectExample.MyRect = rect;
+        rectExample.MyRect <span style="color:#f92672">=</span> rect;
     }
 }
-</code></pre>
-
-<p>In the end you get something like this:</p>
-
-<p><img src="http://www.luispedrofonseca.com/images/unity-custom-rect-editor/rect-editor.gif" alt="" /></p>
-
+</code></pre></div><p>In the end you get something like this:</p>
+<p><img src="http://www.luispedrofonseca.com/images/unity-custom-rect-editor/rect-editor.gif" alt=""></p>
 <p>Instead of the boring default editor:</p>
-
-<p><img src="http://www.luispedrofonseca.com/images/unity-custom-rect-editor/rect-editor-manual.gif" alt="" /></p>
-
+<p><img src="http://www.luispedrofonseca.com/images/unity-custom-rect-editor/rect-editor-manual.gif" alt=""></p>
 <p>Hope you enjoy this little tool and feel free to improve on it!</p>
 
             </div>

@@ -6,11 +6,7 @@
     <description>Recent content in CSharp on Luís Pedro Fonseca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://www.luispedrofonseca.com/categories/csharp/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.luispedrofonseca.com/categories/csharp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity - Supporting Multiple Aspect Ratios</title>
       <link>http://www.luispedrofonseca.com/unity-supporting-multiple-aspect-ratios/</link>
@@ -36,7 +32,7 @@ So what&amp;rsquo;s the solution to make your game look great on these screens w
       <pubDate>Fri, 23 Oct 2015 11:34:16 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/learning-unity-ios-game-development-technical-review/</guid>
-      <description>Yesterday I got in my mailbox a book I technically reviewed for Packt. It&amp;rsquo;s a great feeling having a book with your name on it, even if not on the front page. 😀
+      <description>Yesterday I got in my mailbox a book I technically reviewedfor Packt. It&amp;rsquo;s a great feeling having a book with your name on it, even if not on the front page. 😀
 As you&amp;rsquo;ve probably guessed, it&amp;rsquo;s about Unity and iOS publishing. Although you won&amp;rsquo;t find anything particularly new in there, it&amp;rsquo;s a nice package, has a few good examples and shouldn&amp;rsquo;t disappoint you. It&amp;rsquo;s a good gift for that game dev friend of yours who is just getting started.</description>
     </item>
     
@@ -56,7 +52,7 @@ As you&amp;rsquo;ve probably guessed, it&amp;rsquo;s about Unity and iOS publish
       
       <guid>http://www.luispedrofonseca.com/unity-quick-tips-enum-description-extension-method/</guid>
       <description>While this tip is not Unity specific, it&amp;rsquo;s still very useful for all C# Unity devs out there.
-Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutions to accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.</description>
+Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutionsto accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.</description>
     </item>
     
     <item>
@@ -68,7 +64,7 @@ Recently I needed to get a name/description out of a enum. After some digging ar
       <description>A very useful trick you can do on your Unity projects is to setup some global conditional attributes. Let&amp;rsquo;s see how and what for in a very a simple example.
 First go to your Player Settings (Edit &amp;gt; Project Settings &amp;gt; Player) and under the Other Settings tab, type &amp;ldquo;DEBUG&amp;rdquo; on the Scripting Define Symbols.
 You can now in your scripts do something like:
-[System.Diagnostics.Conditional(&amp;quot;DEBUG&amp;quot;)] void DrawRay(Vector2 start, Vector2 dir, Color color, float duration) { Debug.</description>
+[System.Diagnostics.Conditional(&amp;#34;DEBUG&amp;#34;)] void DrawRay(Vector2 start, Vector2 dir, Color color, float duration) { Debug.</description>
     </item>
     
     <item>

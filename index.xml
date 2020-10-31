@@ -6,11 +6,7 @@
     <description>Recent content on Luís Pedro Fonseca</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://www.luispedrofonseca.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.luispedrofonseca.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity - Supporting Multiple Aspect Ratios</title>
       <link>http://www.luispedrofonseca.com/unity-supporting-multiple-aspect-ratios/</link>
@@ -46,7 +42,7 @@ Unfortunately I didn&amp;rsquo;t win, but being a finalist was more than I ever 
       <pubDate>Sat, 08 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/unity-custom-rect-editor/</guid>
-      <description>One of the main goals of ProCamera2D&amp;rsquo;s new extension - Rooms - was to make it as user-friendly as possible.
+      <description>One of the main goals of ProCamera2D&amp;rsquo;s new extension - Rooms- was to make it as user-friendly as possible.
 Each room is basically a rectangle with some extra data to allow custom transitions. To make it easy to edit the rooms the user should be able to interact with them on the scene. However, Unity does not have a built-in rectangle (Rect) editor tool.
 Gladly, Unity is very flexible and easy to extend, so I created a simple one.</description>
     </item>
@@ -78,8 +74,8 @@ I also got two Expo passes for the 3 days and I even got to attend Unity&amp;rsq
       
       <guid>http://www.luispedrofonseca.com/procamera2d-turns-1/</guid>
       <description>My first commit for ProCamera2D was almost exactly 1 year ago, on January 20th 2015. It was officially released 6 months later.
-Although it may sound weird to celebrate this, instead of the release date, for me it really marks a turning point. On that day I decided I was going to release my own product, no matter what, after years and years of exclusively working on clients&amp;rsquo; projects.
-While I still work on clients&amp;rsquo; projects and I thoroughly enjoy it, there&amp;rsquo;s a deeper and more meaningful connection when the success and direction of a project is 100% under your responsibility.</description>
+Although it may sound weird to celebrate this, instead of the release date, for me it really marks a turning point. On that day I decided I was going to release my own product, no matter what, after years and years of exclusively working on clients&#39; projects.
+While I still work on clients&#39; projects and I thoroughly enjoy it, there&amp;rsquo;s a deeper and more meaningful connection when the success and direction of a project is 100% under your responsibility.</description>
     </item>
     
     <item>
@@ -88,7 +84,7 @@ While I still work on clients&amp;rsquo; projects and I thoroughly enjoy it, the
       <pubDate>Fri, 23 Oct 2015 11:34:16 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/learning-unity-ios-game-development-technical-review/</guid>
-      <description>Yesterday I got in my mailbox a book I technically reviewed for Packt. It&amp;rsquo;s a great feeling having a book with your name on it, even if not on the front page. 😀
+      <description>Yesterday I got in my mailbox a book I technically reviewedfor Packt. It&amp;rsquo;s a great feeling having a book with your name on it, even if not on the front page. 😀
 As you&amp;rsquo;ve probably guessed, it&amp;rsquo;s about Unity and iOS publishing. Although you won&amp;rsquo;t find anything particularly new in there, it&amp;rsquo;s a nice package, has a few good examples and shouldn&amp;rsquo;t disappoint you. It&amp;rsquo;s a good gift for that game dev friend of yours who is just getting started.</description>
     </item>
     
@@ -100,7 +96,7 @@ As you&amp;rsquo;ve probably guessed, it&amp;rsquo;s about Unity and iOS publish
       <guid>http://www.luispedrofonseca.com/my-first-unity-plugin-is-here/</guid>
       <description>Hi all, long time no talk.
 For the past few months I&amp;rsquo;ve been incredibly busy between client work and working on my first Unity plugin. This plugin started out as a little tool that I extracted from Project Cuba, but ended up becoming a full-fledged 2D camera solution so I decided to turn it into a plugin and put it on the Asset Store.
-  It ended up taking up a lot more time than I expected due to all the work I wasn&amp;rsquo;t anticipating, mostly marketing related.</description>
+It ended up taking up a lot more time than I expected due to all the work I wasn&amp;rsquo;t anticipating, mostly marketing related.</description>
     </item>
     
     <item>
@@ -119,8 +115,8 @@ Gladly I got a packed room with over 60 people eager to know more about Unity! 
       <pubDate>Fri, 30 Jan 2015 14:42:19 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/interview-to-creativebloq/</guid>
-      <description>The nice guys at CreativeBloq contacted me to do an interview regarding my creative process, more specifically about how I used Affinity Designer on Project Cuba to speed up my development.
-Take a look here and let me know your thoughts! 😉</description>
+      <description>The nice guys at CreativeBloqcontacted me to do an interview regarding my creative process, more specifically about how I used Affinity Designer on Project Cuba to speed up my development.
+Take a look hereand let me know your thoughts! 😉</description>
     </item>
     
     <item>
@@ -130,7 +126,7 @@ Take a look here and let me know your thoughts! 😉</description>
       
       <guid>http://www.luispedrofonseca.com/create-unity-mobile-icons/</guid>
       <description>If you work with Unity for mobile you know the pain of creating all the required icon sizes. That&amp;rsquo;s why I created a service for OS X (sorry Windows users), that with a simple right-click on a PNG gives you the option to create and conveniently name them.
-Just select a large PNG of your icon, right-click, and then under _Services_ you&amp;rsquo;ll find Create Unity Mobile Icons.
+Just select a large PNG of your icon, right-click, and then under Services you&amp;rsquo;ll find Create Unity Mobile Icons.
 To install, download this zip file and double-click the workflow file inside.</description>
     </item>
     
@@ -170,8 +166,8 @@ However, this week I&amp;rsquo;m bringing you the first musical piece for the ga
       <pubDate>Sat, 06 Sep 2014 21:34:36 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/spine-ik-is-here/</guid>
-      <description>One of the coolest features for Spine is finally ready for prime-time. The inverse kinematics (IK) has been in the works for a few months already but it&amp;rsquo;s now available in the editor and on a wide range of the supported runtimes.
-  For now, I&amp;rsquo;ve only been doing some quick tests but I already have a few ideas on how I can put this to good use on Project Cuba.</description>
+      <description>One of the coolest features for Spineis finally ready for prime-time. The inverse kinematics (IK) has been in the works for a few months already but it&amp;rsquo;s now available in the editor and on a wide range of the supported runtimes.
+For now, I&amp;rsquo;ve only been doing some quick tests but I already have a few ideas on how I can put this to good use on Project Cuba. Stay tuned and follow me on Twitterfor more on Project Cuba coming soon!</description>
     </item>
     
     <item>
@@ -210,7 +206,7 @@ However, Spine does not (yet) have a way for you to test how animations transiti
       
       <guid>http://www.luispedrofonseca.com/unity-quick-tips-enum-description-extension-method/</guid>
       <description>While this tip is not Unity specific, it&amp;rsquo;s still very useful for all C# Unity devs out there.
-Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutions to accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.</description>
+Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutionsto accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.</description>
     </item>
     
     <item>
@@ -231,7 +227,7 @@ Recently I needed to get a name/description out of a enum. After some digging ar
       <description>A very useful trick you can do on your Unity projects is to setup some global conditional attributes. Let&amp;rsquo;s see how and what for in a very a simple example.
 First go to your Player Settings (Edit &amp;gt; Project Settings &amp;gt; Player) and under the Other Settings tab, type &amp;ldquo;DEBUG&amp;rdquo; on the Scripting Define Symbols.
 You can now in your scripts do something like:
-[System.Diagnostics.Conditional(&amp;quot;DEBUG&amp;quot;)] void DrawRay(Vector2 start, Vector2 dir, Color color, float duration) { Debug.</description>
+[System.Diagnostics.Conditional(&amp;#34;DEBUG&amp;#34;)] void DrawRay(Vector2 start, Vector2 dir, Color color, float duration) { Debug.</description>
     </item>
     
     <item>
@@ -281,7 +277,7 @@ I&amp;rsquo;ve worked on a very wide range of projects for high-profiles comp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/contact/</guid>
-      <description>Please get in touch using the form below. Feel free to reach me through Twitter as well.
+      <description>Please get in touch using the form below. Feel free to reach me through Twitteras well.
  .feedback-input { color:#3c3c3c; font-weight:500; font-size: 14px; border-radius: 0; background-color: #efefef; padding: 13px 13px 13px 54px; margin-bottom: 10px; width:100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; border: 3px solid rgba(0,0,0,0); } #contact_name{ background-image: url(/images/contact-form/name.svg); background-size: 30px 30px; background-position: 11px 8px; background-repeat: no-repeat; } #contact_email{ background-image: url(/images/contact-form/email.svg); background-size: 30px 30px; background-position: 11px 8px; background-repeat: no-repeat; } #contact_comment{ background-image: url(/images/contact-form/comment.</description>
     </item>
     
@@ -293,7 +289,7 @@ I&amp;rsquo;ve worked on a very wide range of projects for high-profiles comp
       <guid>http://www.luispedrofonseca.com/portfolio/</guid>
       <description>This is a collection of a few of my best projects for the past several years.
 Some projects are still under NDA so please don&amp;rsquo;t share this page publicly.
-La Trobe Future City R&amp;amp;D Client: La Trobe University, Melbourne
+ La Trobe Future City R&amp;amp;D Client: La Trobe University, Melbourne
 Release Date: N/A
 Duration: 6 months
 Role: Lead Programmer
@@ -307,7 +303,7 @@ Description: La Trobe University in Melbourne is currently building a gigantic n
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.luispedrofonseca.com/project-cuba/</guid>
-      <description>This page will contain all the information regarding my upcoming game &amp;#8211; Project Cuba. For now, I&amp;rsquo;ll leave you here with a promo image by my incredibly talented friend Adi Darda.
+      <description>This page will contain all the information regarding my upcoming game – Project Cuba. For now, I&amp;rsquo;ll leave you here with a promo image by my incredibly talented friend Adi Darda.
 In the meantime, please have a look at the blog posts related to the game.</description>
     </item>
     

@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>Unity - Supporting Multiple Aspect Ratios &middot; Luís Pedro Fonseca</title>
-    <meta name="generator" content="Hugo 0.59.0" />
+    <meta name="generator" content="Hugo 0.77.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Luís Pedro Fonseca">
@@ -30,11 +30,9 @@ So what&rsquo;s the solution to make your game look great on these screens while
     <meta itemprop="name" content="Unity - Supporting Multiple Aspect Ratios">
 <meta itemprop="description" content="One of the biggest doubts people have when creating mobile games is how to handle the myriad of screen resolutions and aspect ratios. Just on iOS there are currently 4 different aspect ratios: 4:3, 3:2, 16:9 and 19.5:9. On Android, given the thousands of different devices, it ranges anywhere between those. Here&rsquo;s how those aspect ratios compare to each other (in portrait mode):
 So what&rsquo;s the solution to make your game look great on these screens while avoiding black bars or stretching?">
-
-
-<meta itemprop="datePublished" content="2018-10-25T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-10-25T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="255">
+<meta itemprop="datePublished" content="2018-10-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-10-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="253">
 
 
 
@@ -149,7 +147,7 @@ So what&rsquo;s the solution to make your game look great on these screens while
     <div class="base-info profile-block">
       <img id="avatar" src="http://www.luispedrofonseca.com/avatar.png">
       <h2 id="name">Luís Pedro Fonseca</h2>
-      <h3 id="title">Game Developer<br>Part-time indie<br><a href="http://www.procamera2d.com">ProCamera2D</a> plugin author</h3>
+      <h3 id="title">Game Developer<!-- raw HTML omitted -->Part-time indie<!-- raw HTML omitted --><a href="http://www.procamera2d.com">ProCamera2D</a> plugin author</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Porto, Portugal</span>
       
     </div>
@@ -270,28 +268,19 @@ So what&rsquo;s the solution to make your game look great on these screens while
             <div class="article-entry" itemprop="articleBody">
                 <p>One of the biggest doubts people have when creating mobile games is how to handle the myriad of screen resolutions and aspect ratios. Just on iOS there are currently 4 different aspect ratios: 4:3, 3:2, 16:9 and 19.5:9. On Android, given the thousands of different devices, it ranges anywhere between those.
 Here&rsquo;s how those aspect ratios compare to each other (in portrait mode):</p>
-
-<p><img src="http://www.luispedrofonseca.com/images/unity-supporting-multiple-aspect-ratios/aspect-ratios.png" alt="" /></p>
-
+<p><img src="http://www.luispedrofonseca.com/images/unity-supporting-multiple-aspect-ratios/aspect-ratios.png" alt=""></p>
 <p>So what&rsquo;s the solution to make your game look great on these screens while avoiding black bars or stretching?</p>
-
 <p>You start by defining your target aspect ratio - this should usually be 16:9 since it&rsquo;s the most common. Then, place your target aspect ratio image inside the other aspect ratios and figure out how it should align. Here&rsquo;s an example:</p>
-
-<p><img src="http://www.luispedrofonseca.com/images/unity-supporting-multiple-aspect-ratios/game-view-aspect-ratio.png" alt="" /></p>
-
+<p><img src="http://www.luispedrofonseca.com/images/unity-supporting-multiple-aspect-ratios/game-view-aspect-ratio.png" alt=""></p>
 <p>In the example above, the blue areas represent what&rsquo;s outside of your target aspect ratio. You need to plan what you want to put here. Ideally your game backgrounds should be made taking this in consideration, otherwise as a last resort you&rsquo;ll have to use black bars.</p>
-
 <p>But how exactly do you achieve this camera behaviour? It&rsquo;s easier said than done, but the gist of it is:</p>
-
 <ol>
 <li>Define in world units what&rsquo;s the size of your camera at your target aspect ratio.</li>
 <li>Calculate based on the current camera aspect, what width and height you&rsquo;ll need to maintain the target aspect ratio</li>
 <li>Scale the camera accordingly</li>
 </ol>
-
-<p>A simpler way is to use the <a href="http://www.procamera2d.com/user-guide/extension-content-fitter/" target="_blank">Content Fitter</a> extension for <a href="http://www.procamera2d.com" target="_blank">Pro Camera 2D</a> and get done with it, but I&rsquo;m not here to advertise it. :)</p>
-
-<p><img src="http://www.procamera2d.com/images/gifs/content_fitter.gif" alt="" /></p>
+<p>A simpler way is to use the <!-- raw HTML omitted -->Content Fitter<!-- raw HTML omitted --> extension for <!-- raw HTML omitted -->Pro Camera 2D<!-- raw HTML omitted --> and get done with it, but I&rsquo;m not here to advertise it. :)</p>
+<p><img src="http://www.procamera2d.com/images/gifs/content_fitter.gif" alt=""></p>
 
             </div>
             <footer class="article-footer">

@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>Unity Quick Tips — Enum Description Extension Method &middot; Luís Pedro Fonseca</title>
-    <meta name="generator" content="Hugo 0.59.0" />
+    <meta name="generator" content="Hugo 0.77.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Luís Pedro Fonseca">
@@ -20,7 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="Unity Quick Tips — Enum Description Extension Method" />
 <meta property="og:description" content="While this tip is not Unity specific, it&rsquo;s still very useful for all C# Unity devs out there.
-Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutions to accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods." />
+Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutionsto accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.luispedrofonseca.com/unity-quick-tips-enum-description-extension-method/" />
 <meta property="article:published_time" content="2014-08-08T14:16:45+00:00" />
@@ -29,12 +29,10 @@ Recently I needed to get a name/description out of a enum. After some digging ar
     
     <meta itemprop="name" content="Unity Quick Tips — Enum Description Extension Method">
 <meta itemprop="description" content="While this tip is not Unity specific, it&rsquo;s still very useful for all C# Unity devs out there.
-Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutions to accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.">
-
-
-<meta itemprop="datePublished" content="2014-08-08T14:16:45&#43;00:00" />
-<meta itemprop="dateModified" content="2014-08-08T14:16:45&#43;00:00" />
-<meta itemprop="wordCount" content="317">
+Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutionsto accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.">
+<meta itemprop="datePublished" content="2014-08-08T14:16:45+00:00" />
+<meta itemprop="dateModified" content="2014-08-08T14:16:45+00:00" />
+<meta itemprop="wordCount" content="316">
 
 
 
@@ -43,7 +41,7 @@ Recently I needed to get a name/description out of a enum. After some digging ar
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity Quick Tips — Enum Description Extension Method"/>
 <meta name="twitter:description" content="While this tip is not Unity specific, it&rsquo;s still very useful for all C# Unity devs out there.
-Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutions to accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods."/>
+Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and there are dozens of different solutionsto accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods."/>
 <meta name="twitter:site" content="@lpfonseca"/>
 
     
@@ -149,7 +147,7 @@ Recently I needed to get a name/description out of a enum. After some digging ar
     <div class="base-info profile-block">
       <img id="avatar" src="http://www.luispedrofonseca.com/avatar.png">
       <h2 id="name">Luís Pedro Fonseca</h2>
-      <h3 id="title">Game Developer<br>Part-time indie<br><a href="http://www.procamera2d.com">ProCamera2D</a> plugin author</h3>
+      <h3 id="title">Game Developer<!-- raw HTML omitted -->Part-time indie<!-- raw HTML omitted --><a href="http://www.procamera2d.com">ProCamera2D</a> plugin author</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Porto, Portugal</span>
       
     </div>
@@ -266,59 +264,43 @@ Recently I needed to get a name/description out of a enum. After some digging ar
 
             <div class="article-entry" itemprop="articleBody">
                 <p>While this tip is not Unity specific, it&rsquo;s still very useful for all C# Unity devs out there.</p>
-
-<p>Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and <a href="http://stackoverflow.com/questions/424366/c-sharp-string-enums" target="_blank">there are dozens of different solutions</a> to accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.</p>
-
+<p>Recently I needed to get a name/description out of a enum. After some digging around, I found this subject is far from consensual and <!-- raw HTML omitted -->there are dozens of different solutions<!-- raw HTML omitted --> to accomplish the same result. For me, by far, the simplest and cleanest way to do it is by using a cool feature in C# called extension methods.</p>
 <p>Extension methods enable you to &ldquo;add&rdquo; methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. That&rsquo;s what we&rsquo;re going to do to the <code>Enum</code> type to get the results we want.</p>
-
 <p>Consider the following scenario: You need an enum with the characters in your game:</p>
-
-<pre><code class="language-c">public enum CharactersEnum
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">public <span style="color:#66d9ef">enum</span> CharactersEnum
 {
 	MAINCHARACTER,
 	ENEMY1,
 	ENEMY2,
 	FINALBOSS
 }
-</code></pre>
+</code></pre></div><p>However at some point, you might want to show the characters names. While <code>FINALBOSS</code> is a perfectly fine name for a character, sometimes you might feel a little bit more creative. In that case, you could add the <code>Description</code> parameter to your enum entries, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">using System.ComponentModel;
 
-<p>However at some point, you might want to show the characters names. While <code>FINALBOSS</code> is a perfectly fine name for a character, sometimes you might feel a little bit more creative. In that case, you could add the <code>Description</code> parameter to your enum entries, like this:</p>
-
-<pre><code class="language-c">using System.ComponentModel;
-
-public enum CharactersEnum
+public <span style="color:#66d9ef">enum</span> CharactersEnum
 {
 	MAINCHARACTER,
 	ENEMY1,
 	ENEMY2,
-	[Description(&quot;Mr. Bad Guy&quot;)]
+	[Description(<span style="color:#e6db74">&#34;Mr. Bad Guy&#34;</span>)]
 	FINALBOSS
 }
-</code></pre>
-
-<p>And then, all you have to do is create an extension method for the <code>Enum</code> type that can grab that description:</p>
-
-<pre><code class="language-c">using System;
+</code></pre></div><p>And then, all you have to do is create an extension method for the <code>Enum</code> type that can grab that description:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">using System;
 using System.ComponentModel;
 
-public static class EnumsHelperExtension
+public <span style="color:#66d9ef">static</span> class EnumsHelperExtension
 {
-	public static string ToDescription(this Enum value)
+	public <span style="color:#66d9ef">static</span> string ToDescription(this Enum value)
 	{
-		DescriptionAttribute[] da = (DescriptionAttribute[])(value.GetType().GetField(value.ToString())).GetCustomAttributes(typeof(DescriptionAttribute), false);
-		return da.Length &gt; 0 ? da[0].Description : value.ToString();
+		DescriptionAttribute[] da <span style="color:#f92672">=</span> (DescriptionAttribute[])(value.GetType().GetField(value.ToString())).GetCustomAttributes(typeof(DescriptionAttribute), false);
+		<span style="color:#66d9ef">return</span> da.Length <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> da[<span style="color:#ae81ff">0</span>].Description : value.ToString();
 	}
 }
-</code></pre>
-
-<p>Save this class in a file somewhere on your project and from now on you can simply do:</p>
-
-<pre><code class="language-c">string charName = CharactersEnum.FinalBoss.ToDescription();
-</code></pre>
-
-<p>All your <code>Enum</code>&rsquo;s can now have a description and in case the they don&rsquo;t, it will simply return the attribute name as a simple <code>ToString()</code> usually would.</p>
-
-<p>Please comment or <a href="https://twitter.com/lpfonseca" target="_blank">add me on Twitter</a>, if you have any questions or suggestions for more quick tips!</p>
+</code></pre></div><p>Save this class in a file somewhere on your project and from now on you can simply do:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">string charName <span style="color:#f92672">=</span> CharactersEnum.FinalBoss.ToDescription();
+</code></pre></div><p>All your <code>Enum</code>&rsquo;s can now have a description and in case the they don&rsquo;t, it will simply return the attribute name as a simple <code>ToString()</code> usually would.</p>
+<p>Please comment or <!-- raw HTML omitted -->add me on Twitter<!-- raw HTML omitted -->, if you have any questions or suggestions for more quick tips!</p>
 
             </div>
             <footer class="article-footer">
