@@ -1,9 +1,5 @@
-# ============ #
-# OS generated #
-# ============ #
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-Icon?
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
