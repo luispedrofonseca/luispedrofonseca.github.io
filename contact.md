@@ -88,8 +88,7 @@ textarea {
 
 <div>
   <div>
-	<form id="contactform" action="https://formspree.io/f/luispedrofonseca@gmail.com" method="POST">
-    <!-- <form id="contactform" name="contact-form" onsubmit="return validateContactForm();" method="POST"> -->
+    <form id="contactform" name="contact-form" onsubmit="return validateContactForm();" method="POST">
       <input type="hidden" name="_subject" value="Luis Pedro Fonseca - Contact Form" />
       <input type="hidden" name="_next" value="/about" />
       <input name="name" type="text" class="feedback-input" id="contact_name" placeholder="Name" />
@@ -100,7 +99,7 @@ textarea {
     </form>
     <script>
       var contactform =  document.getElementById('contactform');
-      contactform.setAttribute('action', '//formspree.io/' + 'luispedrofonseca' + '@' + 'gmail' + '.' + 'com');
+      contactform.setAttribute('action', '//formspree.io/f/' + 'luispedrofonseca' + '@' + 'gmail' + '.' + 'com');
     </script>
   </div>
 
