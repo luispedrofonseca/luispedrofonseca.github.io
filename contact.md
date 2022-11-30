@@ -4,7 +4,6 @@ title: "Contact"
 permalink: /contact/
 author_profile: true
 ---
-
 Please get in touch using the form below. Feel free to reach me through <a href="http://www.twitter.com/lpfonseca" target="_blank">Twitter</a> as well.
 
 <style>
@@ -89,7 +88,8 @@ textarea {
 
 <div>
   <div>
-    <form id="contactform" name="contact-form" onsubmit="return validateContactForm();" method="POST">
+	<form id="contactform" action="https://formspree.io/f/luispedrofonseca@gmail.com" method="POST">
+    <!-- <form id="contactform" name="contact-form" onsubmit="return validateContactForm();" method="POST"> -->
       <input type="hidden" name="_subject" value="Luis Pedro Fonseca - Contact Form" />
       <input type="hidden" name="_next" value="/about" />
       <input name="name" type="text" class="feedback-input" id="contact_name" placeholder="Name" />
