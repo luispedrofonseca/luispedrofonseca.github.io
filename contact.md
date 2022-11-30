@@ -99,7 +99,7 @@ textarea {
     </form>
     <script>
       var contactform = document.getElementById('contactform');
-      contactform.setAttribute('action', '"https://formspree.io/f/xoqbolag"');
+      contactform.setAttribute('action', 'https://formspree.io/f/xoqbolag');
     </script>
   </div>
 
