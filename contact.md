@@ -98,8 +98,8 @@ textarea {
       <input type="submit" value="Send" id="button-blue"/>
     </form>
     <script>
-      var contactform =  document.getElementById('contactform');
-      contactform.setAttribute('action', 'https://formspree.io/f/luispedrofonseca@gmail.com');
+      var contactform = document.getElementById('contactform');
+      contactform.setAttribute('action', '"https://formspree.io/f/xoqbolag"');
     </script>
   </div>
 
