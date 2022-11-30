@@ -99,7 +99,7 @@ textarea {
     </form>
     <script>
       var contactform =  document.getElementById('contactform');
-      contactform.setAttribute('action', '//formspree.io/f/' + 'luispedrofonseca' + '@' + 'gmail' + '.' + 'com');
+      contactform.setAttribute('action', 'https://formspree.io/f/luispedrofonseca@gmail.com');
     </script>
   </div>
 
