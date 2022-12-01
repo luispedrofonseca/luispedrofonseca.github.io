@@ -4,7 +4,7 @@ title: "Contact"
 permalink: /contact/
 author_profile: true
 ---
-Please get in touch using the form below. Feel free to reach me through <a href="http://www.twitter.com/lpfonseca" target="_blank">Twitter</a> as well.
+Feel free to reach me on <a href="http://www.twitter.com/lpfonseca" target="_blank">Twitter</a> or use the form below. I usually reply within 48 hours.
 
 <style>
 .feedback-input {

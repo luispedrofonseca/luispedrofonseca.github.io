@@ -66,7 +66,7 @@ Some projects are still under NDA so please don't share this page publicly.
 **Release Date**: February 2018  
 **Duration**: 4 months  
 **Role**: Lead Developer  
-**Tech stack**: Unity, SteamVR
+**Tech stack**: Unity, SteamVR  
 **Description**: An escape room (in space) designed to introduce the players to Dell EMC products while at the same time having fun in a VR experience.
 {% include image-gallery.html folder="/static/portfolio/dellvr" %}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/300oXYZ06Os" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
