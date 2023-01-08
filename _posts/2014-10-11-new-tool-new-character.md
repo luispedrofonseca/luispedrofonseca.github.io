@@ -1,13 +1,10 @@
 ---
 title: "New tool — New character!"
 date: 2014-10-11 00:00:00 +0000
-categories: Unity  Plugins  ProCamera2D
 permalink: /new-tool-new-character/
-header:
-  overlay_image: /static/hero-images/affinity_designer_featured_image.png
-  teaser: /static/hero-images/affinity_designer_featured_image.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/affinity_designer_featured_image.png
+tags:   [Affinity]
+layout: post
 ---
 A month ago I wrote about why [I wasn't renewing my Adobe subscription](/thank-you-adobe/). At that time, I was planning to replace Photoshop and Illustrator with Pixelmator and iDraw, respectively. One month later, everything still stands, but those like me, who have been considering a change for a long time, now have one more VERY strong reason to do so.
 

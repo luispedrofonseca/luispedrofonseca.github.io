@@ -1,13 +1,10 @@
 ---
 title: "Unity Quick Tips — Local Cache Server"
 date: 2014-07-11 00:00:00 +0000
-categories: Unity  CSharp
 permalink: /unity-quick-tips-cache-server/
-header:
-  overlay_image: /static/hero-images/unity_quick_tips_local_cache_server.png
-  teaser: /static/hero-images/unity_quick_tips_local_cache_server.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/unity_quick_tips_local_cache_server.png
+tags:   [Unity, CSharp]
+layout: post
 ---
 After many years working with Unity, I've realised that one of the most overlooked features of the Unity's Team License, by myself and other fellow developers, is the <a href="http://docs.unity3d.com/Manual/CacheServer.html" target="_blank">Cache Server</a>.
 

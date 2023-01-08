@@ -1,13 +1,10 @@
 ---
 title: "Unity - Supporting Multiple Aspect Ratios"
 date: 2018-10-25 00:00:00 +0000
-categories: Unity  CSharp  Mobile
 permalink: /unity-supporting-multiple-aspect-ratios/
-header:
-  overlay_image: /static/hero-images/unity-multiple-aspect-ratios.jpg
-  teaser: /static/hero-images/unity-multiple-aspect-ratios.jpg
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/unity-multiple-aspect-ratios.jpg
+tags:   [Unity, CSharp, Mobile]
+layout: post
 ---
 One of the biggest doubts people have when creating mobile games is how to handle the myriad of screen resolutions and aspect ratios. Just on iOS there are currently 4 different aspect ratios: 4:3, 3:2, 16:9 and 19.5:9. On Android, given the thousands of different devices, it ranges anywhere between those.
 Here's how those aspect ratios compare to each other (in portrait mode):

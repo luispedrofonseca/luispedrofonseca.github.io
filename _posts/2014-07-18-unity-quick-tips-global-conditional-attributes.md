@@ -1,13 +1,10 @@
 ---
 title: "Unity Quick Tips — Global Conditional Attributes"
 date: 2014-07-18 00:00:00 +0000
-categories: Unity  CSharp
 permalink: /unity-quick-tips-global-conditional-attributes/
-header:
-  overlay_image: /static/hero-images/unity_quick_tips_global_conditional_attributes.png
-  teaser: /static/hero-images/unity_quick_tips_global_conditional_attributes.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/unity_quick_tips_global_conditional_attributes.png
+tags:   [Unity, CSharp]
+layout: post
 ---
 A very useful trick you can do on your Unity projects is to setup some global conditional attributes. Let's see how and what for in a very a simple example.
 

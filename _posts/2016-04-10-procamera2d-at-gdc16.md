@@ -1,13 +1,10 @@
 ---
 title: "ProCamera2D at GDC16"
 date: 2016-04-10 00:00:00 +0000
-categories: Unity  Plugins  ProCamera2D
 permalink: /procamera2d-at-gdc16/
-header:
-  overlay_image: /static/hero-images/procamera2d-at-gdc16.jpg
-  teaser: /static/hero-images/procamera2d-at-gdc16.jpg
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/procamera2d-at-gdc16.jpg
+tags:   [Unity, Plugins, ProCamera2D]
+layout: post
 ---
 This year I had the honor to be invited to be part of the biggest game development conference in the world — the Game Developers Conference in San Francisco. The invite came from Unity and they were kind enough to offer me a kiosk, inside their gigantic mega-booth, where I could showcase my <a href="http://www.procamera2d.com" target="_blank">Unity camera plugin - ProCamera2D</a>.
 

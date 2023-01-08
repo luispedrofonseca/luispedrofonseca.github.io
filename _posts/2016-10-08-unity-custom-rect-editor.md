@@ -1,13 +1,10 @@
 ---
 title: "Unity Custom Rect Editor"
 date: 2016-10-08 00:00:00 +0000
-categories: Unity  Plugins  ProCamera2D
 permalink: /unity-custom-rect-editor/
-header:
-  overlay_image: /static/hero-images/unity-custom-rect-editor.png
-  teaser: /static/hero-images/unity-custom-rect-editor.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/unity-custom-rect-editor.png
+tags:   [Unity, Plugins, ProCamera2D]
+layout: post
 ---
 One of the main goals of <a href="http://www.procamera2d.com/user-guide/rooms" target="_blank">ProCamera2D</a>'s new extension - <a href="http://www.procamera2d.com/user-guide/extension-rooms/" target="_blank">Rooms</a> - was to make it as user-friendly as possible.
 

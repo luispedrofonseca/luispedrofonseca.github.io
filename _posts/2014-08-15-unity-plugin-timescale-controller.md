@@ -1,13 +1,10 @@
 ---
 title: "Unity Plugin — TimeScale Controller (Free)"
 date: 2014-08-15 00:00:00 +0000
-categories: Unity  Plugins  Project Cuba
 permalink: /unity-plugin-timescale-controller/
-header:
-  overlay_image: /static/hero-images/unity_time_scale_controller_featured_image.png
-  teaser: /static/hero-images/unity_time_scale_controller_featured_image.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/unity_time_scale_controller_featured_image.png
+tags:   [Unity, Plugins, Project-Cuba]
+layout: post
 ---
 One of the key aspects of the game I'm [currently working on](/project-cuba "Project Cuba") is trying to make all the animations blend nicely together. That blending is accomplished by the fantastic Spine which I vouched for in a [previous blog post](/unity-2d-skeletal-animation/).
 

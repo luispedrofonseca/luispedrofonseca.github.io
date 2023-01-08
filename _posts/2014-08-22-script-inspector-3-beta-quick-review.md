@@ -1,13 +1,10 @@
 ---
 title: "Script Inspector 3 (Beta) Quick Review"
 date: 2014-08-22 00:00:00 +0000
-categories: Unity  Plugins  CSharp
 permalink: /script-inspector-3-beta-quick-review/
-header:
-  overlay_image: /static/hero-images/script_inspector_featured_image.png
-  teaser: /static/hero-images/script_inspector_featured_image.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/script_inspector_featured_image.png
+tags:   [Unity, Plugins, CSharp]
+layout: post
 ---
 If you're working with Unity on a Mac you are unfortunately stuck to the ugly, outdated and painfully sluggish, MonoDevelop. There are some alternatives like using <a href="http://wiki.unity3d.com/index.php/Using_Sublime_Text_as_a_script_editor" target="_blank">Sublime</a>, <a href="http://forum.unity3d.com/threads/c-bundle-for-textmate-version-0-03-released-4-18.1568/" target="_blank">TextMate</a>, or, if you're on feeling adventurous, you can even use Visual Studio (with the amazing <a href="http://unityvs.com" target="_blank">UnityVS</a>) from a virtual machine. However, none of these options is really convenient since you either have to give up on most benefits of a true IDE or you have to use a resource hog VM.
 

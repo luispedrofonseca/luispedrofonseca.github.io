@@ -1,13 +1,10 @@
 ---
 title: "Project Cuba First Audio Test"
 date: 2014-09-13 00:00:00 +0000
-categories: Project Cuba
 permalink: /project-cuba-first-audio-test/
-header:
-  overlay_image: /static/hero-images/project_cuba_featured_image.jpg
-  teaser: /static/hero-images/project_cuba_featured_image.jpg
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/project_cuba_featured_image.jpg
+tags:   [Project-Cuba]
+layout: post
 ---
 While at this point I'd like to be showing you some Project Cuba gameplay, the truth is that progress on that regard has been slower than expected. I've been super busy with some client projects and when I do have some time, there's still plenty to do before my perfectionist self puts some gameplay out there.  But please don't despair, it's coming soon! 😁
 

@@ -1,100 +1,62 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Luís Pedro Fonseca
-title_separator: "|"
-subtitle: "AR/VR Specialist"
-email: luispedrofonseca@gmail.com
-description: Unity Developer with a focus on Augmented and Virtual Reality
+#-------------------------------
+# General Site Settings
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.luispedrofonseca.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: lpfonseca
-github_username: luispedrofonseca
-logo: "/static/logo.png"
 
-# Build settings
-# theme: minima
-remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: "dark" #"default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+#-------------------------------
+# Build Settings
+markdown: kramdown
+permalink: /:title
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
+  - jekyll/tagging
 
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "luspedrofonseca"
+paginate: 6
+paginate_path: "/blog/page/:num"
 
-search: true
 
-og_image: /static/logo.png
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /blog/:slug
+  projects:
+    output: true
+    permalink: /project/:slug
 
-author:
-  name     : " "
-  # avatar   : ""
-  bio      : "Unity Developer with a focus on Augmented and Virtual Reality"
-  location : "Porto, Portugal"
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/lpfonseca"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/luispedrofonseca"
-
+# Pages Path
 defaults:
-  # _posts
   - scope:
       path: ""
-      type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: false
-      comments: true
-      share: true
-      related: true
-      show_date: true
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
 
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  /:title
+
+sass:
+  sass_dir: _sass
+  style: compressed

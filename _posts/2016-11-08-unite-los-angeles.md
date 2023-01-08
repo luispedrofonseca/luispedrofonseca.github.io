@@ -1,13 +1,10 @@
 ---
 title: "Unite Los Angeles 16"
 date: 2016-11-08 00:00:00 +0000
-categories: Unity  Plugins  ProCamera2D
 permalink: /unite-los-angeles-16/
-header:
-  overlay_image: /static/hero-images/unity-awards-16.png
-  teaser: /static/hero-images/unity-awards-16.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/unity-awards-16.png
+tags:   [Unity, Plugins, ProCamera2D]
+layout: post
 ---
 It was with great pleasure and pride that I learnt that ProCamera2D got nominated to this year's Unity Awards! The award cerimony took place in Los Angeles, on the first evening of the Unite 16 conference.
 

@@ -1,13 +1,10 @@
 ---
 title: "My first Unity plugin is here!"
 date: 2015-07-30 00:00:00 +0000
-categories: Unity  Plugins  ProCamera2D
 permalink: /my-first-unity-plugin-is-here/
-header:
-  overlay_image: /static/hero-images/my-first-plugin-is-here.png
-  teaser: /static/hero-images/my-first-plugin-is-here.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/my-first-plugin-is-here.png
+tags:   [Unity, Plugins, ProCamera2D]
+layout: post
 ---
 Hi all, long time no talk.
 

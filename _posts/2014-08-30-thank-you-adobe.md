@@ -2,11 +2,9 @@
 title: "Thank you Adobe!"
 date: 2014-08-30 00:00:00 +0000
 permalink: /thank-you-adobe/
-header:
-  overlay_image: /static/hero-images/goodbye_adobe.png
-  teaser: /static/hero-images/goodbye_adobe.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/goodbye_adobe.png
+tags:   [Random]
+layout: post
 ---
 We've had a great journey together but it's time to say goodbye!... Although... It's your fault and let me explain why...
 

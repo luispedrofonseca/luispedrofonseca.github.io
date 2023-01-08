@@ -1,13 +1,10 @@
 ---
 title: "Unity Quick Tips — Enum Description Extension Method"
 date: 2014-08-08 00:00:00 +0000
-categories: Unity  CSharp
 permalink: /unity-quick-tips-enum-description-extension-method/
-header:
-  overlay_image: /static/hero-images/unity_quick_tips_enum_description.png
-  teaser: /static/hero-images/unity_quick_tips_enum_description.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/unity_quick_tips_enum_description.png
+tags:   [Unity, CSharp]
+layout: post
 ---
 While this tip is not Unity specific, it's still very useful for all C# Unity devs out there.
 

@@ -1,13 +1,10 @@
 ---
 title: "Unity VR Joystick"
 date: 2017-02-02 00:00:00 +0000
-categories: Unity  CSharp  VR
 permalink: /unity-vr-joystick/
-header:
-  overlay_image: /static/hero-images/unity-vr-joystick.png
-  teaser: /static/hero-images/unity-vr-joystick.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/unity-vr-joystick.png
+tags:   [Unity, CSharp, VR]
+layout: post
 ---
 Over the last couple of years, I've become more and more interested in virtual reality, especially after trying out a bunch of demos at the last Unite in LA. So much, in fact, that I have decided to go ahead and buy an <a href="http://www.vive.com" target="_blank">HTC Vive</a>. Being a new technology, it is still quite expensive, not only because of the price of the device itself but also because you need to have a pretty beefy PC to support it. I have put together a <a href="https://www.tonymacx86.com" target="_blank">Hackintosh</a> (maybe more about that in a future post), so I can still use OSX for my daily job but also run Windows which is a requirement for desktop VR.
 

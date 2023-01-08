@@ -1,13 +1,10 @@
 ---
 title: "Unity Workshop"
 date: 2015-03-18 00:00:00 +0000
-categories: Unity  Plugins  ProCamera2D
 permalink: /unity-workshop/
-header:
-  overlay_image: /static/hero-images/cesium.png
-  teaser: /static/hero-images/cesium.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/cesium.png
+tags:   [Unity, CSharp, Teaching]
+layout: post
 ---
 Past month I received an invitation to give an Unity workshop at the prestigious <a href="http://www.uminho.pt/en/home_en" target="_blank">University of Minho</a>, located in the beautiful city of <a href="http://en.wikipedia.org/wiki/Braga" target="_blank">Braga</a>. The invitation came from the extremely welcoming guys at <a href="http://www.cesium.di.uminho.pt" target="_blank">CeSIUM</a>, who were organising a week of events related to computer engineering.
 

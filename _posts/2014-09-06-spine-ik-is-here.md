@@ -1,13 +1,10 @@
 ---
 title: "Spine IK is here!"
 date: 2014-09-06 00:00:00 +0000
-categories: Unity  Plugins  Project Cuba
 permalink: /spine-ik-is-here/
-header:
-  overlay_image: /static/hero-images/spine_logo.png
-  teaser: /static/hero-images/spine_logo.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/spine_logo.png
+tags:   [Unity, Plugins, Project-Cuba]
+layout: post
 ---
 One of the coolest features for <a href="http://esotericsoftware.com" target="_blank">Spine</a> is finally ready for prime-time. The inverse kinematics (IK) has been in the works for a few months already but it's now available in the editor and on a wide range of the <a href="https://github.com/EsotericSoftware/spine-runtimes" target="_blank">supported runtimes</a>.
 

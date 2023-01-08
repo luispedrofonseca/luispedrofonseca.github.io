@@ -1,13 +1,10 @@
 ---
 title: "Going public"
 date: 2014-07-01 00:00:00 +0000
-categories: Project Cuba
 permalink: /going-public/
-header:
-  overlay_image: /static/hero-images/going-public.png
-  teaser: /static/hero-images/going-public.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/going-public.png
+tags:   [Random, Project-Cuba]
+layout: post
 ---
 For the last several months, during my (very limited) free time, I've been working  on a game which started to form in my head ever since I visited the incredibly beautiful city of Havana, Cuba in October 2012.
 

@@ -3,11 +3,9 @@ title: "Learning Unity iOS Game Development — Technical review"
 date: 2015-10-23 00:00:00 +0000
 categories: Unity  CSharp
 permalink: /learning-unity-ios-game-development-technical-review/
-header:
-  overlay_image: /static/hero-images/learning_ios_unity.png
-  teaser: /static/hero-images/learning_ios_unity.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/learning_ios_unity.png
+tags:   [Unity, CSharp, Teaching]
+layout: post
 ---
 Yesterday I got in my mailbox <a href="https://www.packtpub.com/game-development/learning-unity-ios-game-development" target="_blank">a book I technically reviewed</a> for Packt. It's a great feeling having a book with your name on it, even if not on the front page. 😀
 

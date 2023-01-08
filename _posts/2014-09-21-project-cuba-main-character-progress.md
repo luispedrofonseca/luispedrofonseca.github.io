@@ -1,13 +1,10 @@
 ---
 title: "Project Cuba Main Character progress"
 date: 2014-09-21 00:00:00 +0000
-categories: Project Cuba
 permalink: /project-cuba-main-character-progress/
-header:
-  overlay_image: /static/hero-images/jack_progress_featured_image.jpg
-  teaser: /static/hero-images/jack_progress_featured_image.jpg
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/jack_progress_featured_image.jpg
+tags:   [Project-Cuba]
+layout: post
 ---
 Recently I was digging through some of my files and found the various iterations of Jack, the main character of my upcoming game, Project Cuba.
 

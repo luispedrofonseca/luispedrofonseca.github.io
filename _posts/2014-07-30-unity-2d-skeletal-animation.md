@@ -1,13 +1,10 @@
 ---
 title: "Unity 2D Skeletal Animation"
 date: 2014-07-30 00:00:00 +0000
-categories: Unity  Plugins  Project Cuba
 permalink: /unity-2d-skeletal-animation/
-header:
-  overlay_image: /static/hero-images/unity_2d_skeletal_animation_featured_image.png
-  teaser: /static/hero-images/unity_2d_skeletal_animation_featured_image.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/unity_2d_skeletal_animation_featured_image.png
+tags:   [Unity, Plugins, Project-Cuba]
+layout: post
 ---
 One of the biggest draws, if not the biggest, of doing my own games is the opportunity to spend as much time on a feature as I feel is needed — not something you can say about most client projects where you have the constant pressure of a strict deadline on your shoulders. While most of the time, you just have to step back and realize when you're pushing a certain feature or detail too far, sometimes you also need to bite the bullet and re-do some of your previous work.
 

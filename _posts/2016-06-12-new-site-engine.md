@@ -1,13 +1,10 @@
 ---
 title: "New site engine — Hugo"
 date: 2016-06-12 00:00:00 +0000
-categories: Unity  Plugins  ProCamera2D
 permalink: /new-site-engine-hugo/
-header:
-  overlay_image: /static/hero-images/new-site-engine-hugo.jpg
-  teaser: /static/hero-images/new-site-engine-hugo.jpg
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/new-site-engine-hugo.jpg
+tags:   [Hugo]
+layout: post
 ---
 Ever since I started with this blog/website, publishing a new post, updating some information or even tweaking its layout, has always been a chore.
 

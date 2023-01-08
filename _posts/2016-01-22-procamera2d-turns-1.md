@@ -1,13 +1,10 @@
 ---
 title: "ProCamera2D turns 1!"
 date: 2016-01-22 00:00:00 +0000
-categories: Unity  Plugins  ProCamera2D
 permalink: /procamera2d-turns-1/
-header:
-  overlay_image: /static/hero-images/procamera2d_anniversary.png
-  teaser: /static/hero-images/procamera2d_anniversary.png
-  overlay_filter: 0.5
-  show_overlay_excerpt: false
+image:  /static/hero-images/procamera2d_anniversary.png
+tags:   [Unity, Plugins, ProCamera2D]
+layout: post
 ---
 My first commit for ProCamera2D was almost exactly 1 year ago, on January 20th 2015. It was officially released 6 months later.
 
