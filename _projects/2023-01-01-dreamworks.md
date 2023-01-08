@@ -1,6 +1,6 @@
 ---
 title: Dreamworks Animation
-subtitle: Veggie Tales Game
+subtitle: Mobile Game
 date: 2023-01-01 00:00:07 +0000
 image: /static/project-covers/dreamworks.png
 ---

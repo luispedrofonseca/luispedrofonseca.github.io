@@ -1,6 +1,6 @@
 ---
 title: Microsoft
-subtitle: Tankster
+subtitle: Azure Technology Showcase App
 date: 2023-01-01 00:00:06 +0000
 image: /static/project-covers/microsoft.png
 ---

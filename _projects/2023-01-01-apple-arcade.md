@@ -1,6 +1,6 @@
 ---
 title: Apple Arcade
-subtitle: UFO On Tape 2
+subtitle: Launch Title
 date: 2023-01-01 00:00:04 +0000
 image: /static/project-covers/apple-arcade.png
 ---

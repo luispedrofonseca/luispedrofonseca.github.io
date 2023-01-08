@@ -1,6 +1,6 @@
 ---
 title: Riot Games
-subtitle: League of Legends Launcher
+subtitle: League of Legends Launcher, Internal Apps
 date: 2023-01-01 00:00:01 +0000
 image: /static/project-covers/riot-games.png
 ---
