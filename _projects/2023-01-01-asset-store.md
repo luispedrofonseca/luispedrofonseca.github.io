@@ -9,7 +9,9 @@ image: /static/project-covers/asset-store.png
 
 After having worked on Project Cuba for a few months I realized that its camera controller was pretty competent. I made it from scratch because, at the time, I couldn't find anything that suited my needs. Since my side-project game wasn't going anywhere, I decided to polish the camera controller a bit more and put it on the Asset Store. 
 
-The plugin released in 2015 and it quickly became very popular due to the amount of 2D Unity games being made and a lack of competition. Got nominated for an Unity Award in 2016 and it has accumulated more than 600 5-star reviews over the years. Now with Unity's own Cinemachine being available for free and, let's be honest, with a lot more features, it's slowly dwindling into oblivion. But it had a great run and it's one of the projects I'm most proud of.
+The plugin released in 2015 and it quickly became very popular due to the amount of 2D Unity games being made and a lack of competition. Got nominated for an Unity Award in 2016 and it has accumulated more than 600 5-star reviews over the years. 
+
+Nowadays with Unity's own Cinemachine being available for free it's an harder sell. However, for someone looking for a more streamlined 2D approach it's still a strong option. Although its codebase is not as good as it could be, due to lack of time but also lack of experience with Unity when I built it several years ago, it's still one of the projects I'm most proud of.
 
 [Website](http://www.procamera2d.com/){:target="_blank"}
 
