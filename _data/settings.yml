@@ -74,7 +74,7 @@ testimonial-items:
 # Blog Section
 
 blog__settings:
-  blog__title: Latest <span class="text-span">Blog</span> Posts # Add a 'text-span' class to highlight text.
+  blog__title: <span class="text-span">Blog</span> Posts # Add a 'text-span' class to highlight text.
   blog__description:
 
 
