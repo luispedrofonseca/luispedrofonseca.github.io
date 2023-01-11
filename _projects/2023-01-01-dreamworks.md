@@ -7,6 +7,10 @@ image: /static/project-covers/dreamworks.png
 
 ## Veggie Tales
 
+##### Tech Stack 
+* Unity
+* Objective-C
+
 VeggieTales is a leading animated property with hilarious storytelling, singable songs and lifelong lessons for kids.
 For this game, Dreamworks wanted to bring their characters to life with an exciting mobile game that features stories/episodes that convey a message based on a bible devotional.
 

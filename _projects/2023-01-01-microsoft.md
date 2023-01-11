@@ -7,6 +7,11 @@ image: /static/project-covers/microsoft.png
 
 ## Microsoft
 
+##### Tech Stack 
+* C#
+* Objective-C
+* Azure
+
 In 2011, in partnership with Grant Skinner, we were asked by Microsoft to build the game Tankster. It was a proof-of-concept to showcase at their annual BUILD conference that was going to be included in the Windows Azure Toolkit for Social Games.
 
 We had three primary goals when building this game:

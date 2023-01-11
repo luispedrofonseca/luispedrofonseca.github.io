@@ -7,6 +7,11 @@ image: /static/project-covers/riot-games.png
 
 ## League of Legends Launcher Redesign
 
+##### Tech Stack 
+* Flash, Flex
+* Adobe AIR
+* ActionScript 3.0
+
 In the Summer of 2012, Riot Games reached out to FLASHized (a Flash focused sister company of X-Team) and asked for help for coming up with the next generation of their League of Legends launcher. The technology behind it was Adobe AIR with a custom flavour of Flex and various in-house Flash libraries. To circumvent the performance limitations of the Flash runtime, we explored the cutting edge GPU support (Molehill) which allowed us to really push the envelope. 
 We did a lot of exploration of new designs and concepts which were then used to completely redesign the launcher from the groundup.
 
@@ -26,6 +31,11 @@ With our close collaboration with Riot Games came the opportunity to work on a c
 
 ## Riot Games Minimap
 
+##### Tech Stack 
+* Xamarin
+* Java
+* Objective-C
+
 A custom map and calendar app, that allowed the Riot Games staff to navigate through their new gigantic offices in Los Angeles. The user could easily find or book any room or facility based on its current location.
 
 <div class="gallery-box">
@@ -44,6 +54,11 @@ A custom map and calendar app, that allowed the Riot Games staff to navigate thr
 ---
 
 ## Riot Games News Reader
+
+##### Tech Stack 
+* Xamarin
+* Java
+* Objective-C
 
 A custom news app, that allowed the Riot Games employees to keep up to date on the current news related to the company.
 

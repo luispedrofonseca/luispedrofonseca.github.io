@@ -1,11 +1,14 @@
 ---
 title: Unity Asset Store
-subtitle: Pro Camera 2D
+subtitle: Plugin - Pro Camera 2D
 date: 2023-01-01 00:00:09 +0000
 image: /static/project-covers/asset-store.png
 ---
 
 ## Pro Camera 2D
+
+##### Tech Stack 
+* Unity
 
 After having worked on Project Cuba for a few months I realized that its camera controller was pretty competent. I made it from scratch because, at the time, I couldn't find anything that suited my needs. Since my side-project game wasn't going anywhere, I decided to polish the camera controller a bit more and put it on the Asset Store. 
 

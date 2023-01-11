@@ -7,6 +7,10 @@ image: /static/project-covers/apple-arcade.png
 
 ## UFO On Tape: First Contact
 
+##### Tech Stack 
+* Unity
+* ARKit
+
 Apple Arcade officially launched on September, 2019 alongside iOS 13. In December 2018 I joined the Revolutionary Concepts team to create one of its launch titles, the sequel to the highly successful UFO On Tape.
 
 Exclusive to Apple Arcade, 'UFO on Tape 2' puts you in the hot seat as you speed through the countryside looking for evidence of visitors from outer space.
