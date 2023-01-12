@@ -11,5 +11,3 @@ I've worked on a very wide range of projects for high-profiles companies such
 This is my personal website and blog and here you'll find more information about the work I do, game (and interactive) development tips and tricks and random bits of rambling about the digital world we live in. Follow me on <a href="https://twitter.com/lpfonseca" target="_blank">Twitter</a> too as that is my primary communication channel.
 
 **I'm currently not available for hire but I'm always keen to hear about interesting projects, <span class="text-span">get in touch</span>!**
-
-***
